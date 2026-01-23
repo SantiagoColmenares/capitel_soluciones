@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nuestros Servicios - Capitel Soluciones</title>
+    <script src="src/app.js" defer></script>
+    <link rel="stylesheet" href="src/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="bg-background-light font-display text-slate-800 antialiased">
+  <header class="sticky-nav w-full border-b border-solid border-primary/10 bg-primary px-4 md:px-10 py-3 relative">
+    <div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2">
+          <div class="size-10 rounded-full bg-white p-1 flex items-center justify-center">
+            <div class="size-full bg-[url('/assets/image.png')] bg-contain bg-center bg-no-repeat rounded-full"></div>
+          </div>
+          <div class="flex flex-col">
+            <h2 class="text-white text-lg font-black leading-none tracking-tight">
+              CAPITEL
+            </h2>
+            <span class="text-accent-lime text-xs font-bold leading-none tracking-[0.1em]">
+              SOLUCIONES
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu (Desktop + Mobile container) -->
+      <div id="mobile-menu" class="
+        absolute top-full left-0 w-full
+        bg-primary border-t border-primary/20
+        overflow-hidden
+
+        max-h-0 opacity-0
+        transition-all duration-300 ease-in-out
+
+        px-6 py-6 flex flex-col gap-6
+
+        lg:static lg:flex lg:flex-1 lg:flex-row lg:justify-end lg:items-center lg:gap-10
+        lg:max-h-none lg:opacity-100
+        lg:border-0 lg:p-0
+      ">
+        <!-- Links -->
+        <nav class="flex flex-col lg:flex-row gap-6 lg:gap-8">
+          <a href="index.html" class="text-accent-lime text-sm font-bold leading-normal tracking-wider">
+            Inicio
+          </a>
+          <a href="servicios.html" class="text-white/90 text-sm font-medium leading-normal hover:text-accent-lime transition-colors">
+            Servicios
+          </a>
+          <a href="#" class="text-white/90 text-sm font-medium leading-normal hover:text-accent-lime transition-colors">
+            Proyectos
+          </a>
+          <a href="#" class="text-white/90 text-sm font-medium leading-normal hover:text-accent-lime transition-colors">
+            Nosotros
+          </a>
+        </nav>
+
+        <!-- Contact button -->
+        <div class="flex items-center gap-4 lg:border-l border-white/20 lg:pl-10">
+          <button
+            class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-accent-lime text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+            Contacto
+          </button>
+        </div>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="lg:hidden flex items-center text-white">
+        <button id="menu-toggle" aria-label="Abrir menú" data-open="false">
+          <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+    <main class="w-full">
+        <section class="relative w-full h-[400px] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0 bg-cover bg-center"
+                style='background-image: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCY-Xtbjhh_o2mFA5fBKCZ_kg1N1QD3seNQkfy_Gw3HNIjOC27TB4HsgxfcgqkDVWHtUU4em5eMoNaR20Ieq9sQzdDHlacrn0Yj9JnSUJVP7FeENO3sKudcwVeiRAmANCddtrQEXX37ot0llHOffqdAFl6fy0Q0qWB2yyLjujqBJgQGE-36JhsakTmAQN12-a0a3B_UflQbLfd4xBO4HkKT2DuI4pc0QURL8Ye17xfHGKtied0aRqBU7nKkTX8zIAl0RzUEHgfRnkO7");'>
+            </div>
+            <div class="relative z-10 text-center px-4 max-w-[800px]">
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-4 tracking-tight">Nuestros Servicios</h1>
+                <p class="text-lg md:text-xl text-white/80 font-normal">Soluciones técnicas en ingeniería estructural y
+                    construcción premium con rigor industrial.</p>
+            </div>
+        </section>
+        <div class="max-w-[1200px] mx-auto px-4 py-20 space-y-32">
+            <section class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-4xl text-lime-green">engineering</span>
+                        <h2 class="text-3xl font-bold">Refuerzo Estructural</h2>
+                    </div>
+                    <p class="text-lg leading-relaxed text-slate-600">
+                        Aumentamos la capacidad de carga y prolongamos la vida útil de edificaciones existentes. Nuestra
+                        especialidad reside en la ingeniería de detalle para situaciones críticas de estabilidad.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-white p-5 rounded-xl border-l-4 border-lime-green shadow-md">
+                            <span class="material-symbols-outlined text-lime-green mb-2">layers</span>
+                            <h3 class="font-bold text-navy-corp mb-1">Fibra de Carbono</h3>
+                            <p class="text-sm text-slate-500">Sistemas FRP para refuerzo sísmico y estructural sin
+                                añadir peso significativo.</p>
+                        </div>
+                        <div class="bg-white p-5 rounded-xl border-l-4 border-lime-green shadow-md">
+                            <span class="material-symbols-outlined text-lime-green mb-2">foundation</span>
+                            <h3 class="font-bold text-navy-corp mb-1">Recalce de Cimientos</h3>
+                            <p class="text-sm text-slate-500">Estabilización de terrenos y refuerzo de bases mediante
+                                micropilotes.</p>
+                        </div>
+                    </div>
+                    <button
+                        class="w-fit bg-lime-green text-navy-corp px-8 py-4 rounded-xl font-bold text-base hover:bg-lime-green/90 hover:shadow-xl hover:shadow-lime-green/20 transition-all flex items-center gap-2 group">
+                        Solicitar Cotización Técnica
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative border-4 border-white">
+                        <img alt="Structural reinforcement work" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnzK6kiXkZW17JxknGExXcuwJC5C2B1C8FwKJ5DK2IP7JLbv_qa0zGJEoGKLLsCoNZHuBveVByuNtjPk_SKtR_0_fB9VTkdAVfY1T09nJskFQlDEUliwTsn9uSGa6oowuKOisvYWQaEHmDqe42oDLl-ie8MIHZBILBSTAgu-W5sTb4Vbe0DZVWwTF3NUcsI8gWt5llcDBRc1y9hlAkD5gdkmzJ927l5HkXu5aWCIzlWWK1Ip1lCVcfDHCA9Dbxeg6Nff3emIvG4I1T" />
+                    </div>
+                </div>
+            </section>
+            <section class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-1">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative border-4 border-white">
+                        <img alt="Modern commercial office remodel" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF8Esv8vj47wejyvAKKJ1zQwgKSFxDJLLTrc1ZUhxbceXjjShJtTiBMTr38o3o_nNr7J3jAMy17dGclDvnyWlTuywgAQMTv7MVZNbdUd4ew1p39hoqttJ_L4pK7jII9rCY7ji9ad83pn-wM6yV2Dk-uDZvYHYxxsaEqQ0--IBpxjH37JdLsk8ZK_OKkS-koXc40WsY1EoZLZhjyyodTR4pyBox4CXTNmcPQm8sr6xuWAFSTIMvKNORefxirnnMeJ55ahcKXMzNfBOf" />
+                    </div>
+                </div>
+                <div class="order-2 flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-4xl text-lime-green">store</span>
+                        <h2 class="text-3xl font-bold">Remodelación Comercial</h2>
+                    </div>
+                    <p class="text-lg leading-relaxed text-slate-600">
+                        Transformamos espacios de negocio para optimizar la operatividad y reflejar la identidad de
+                        marca, cumpliendo con los estándares más exigentes de normativas industriales.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-lime-green mt-1">check_circle</span>
+                            <span class="font-medium text-navy-corp">Redistribución de áreas operativas y oficinas
+                                corporativas.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-lime-green mt-1">check_circle</span>
+                            <span class="font-medium text-navy-corp">Instalaciones electromecánicas de alto
+                                rendimiento.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-lime-green mt-1">check_circle</span>
+                            <span class="font-medium text-navy-corp">Acabados industriales de alta resistencia y
+                                durabilidad.</span>
+                        </li>
+                    </ul>
+                    <button
+                        class="w-fit bg-lime-green text-navy-corp px-8 py-4 rounded-xl font-bold text-base hover:bg-lime-green/90 hover:shadow-xl hover:shadow-lime-green/20 transition-all flex items-center gap-2 group">
+                        Solicitar Cotización Comercial
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                </div>
+            </section>
+            <section class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1 flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-4xl text-lime-green">home_work</span>
+                        <h2 class="text-3xl font-bold">Renovación Residencial</h2>
+                    </div>
+                    <p class="text-lg leading-relaxed text-slate-600">
+                        Elevamos el valor de su propiedad mediante reformas integrales que fusionan diseño
+                        arquitectónico moderno con solidez estructural de primer nivel.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-4 py-2 bg-navy-corp text-white rounded-full text-xs font-bold uppercase tracking-wider">Ampliaciones</span>
+                        <span
+                            class="px-4 py-2 bg-navy-corp text-white rounded-full text-xs font-bold uppercase tracking-wider">Open
+                            Concept</span>
+                        <span
+                            class="px-4 py-2 bg-navy-corp text-white rounded-full text-xs font-bold uppercase tracking-wider">Eficiencia
+                            Energética</span>
+                        <span
+                            class="px-4 py-2 bg-navy-corp text-white rounded-full text-xs font-bold uppercase tracking-wider">Diseño
+                            Industrial</span>
+                    </div>
+                    <p class="italic text-sm text-slate-500 border-l-2 border-lime-green pl-4 py-2">"Comprometidos con la
+                        excelencia técnica en cada detalle, desde el cimiento hasta el último acabado de lujo."</p>
+                    <button
+                        class="w-fit bg-lime-green text-navy-corp px-8 py-4 rounded-xl font-bold text-base hover:bg-lime-green/90 hover:shadow-xl hover:shadow-lime-green/20 transition-all flex items-center gap-2 group">
+                        Solicitar Cotización Residencial
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative border-4 border-white">
+                        <img alt="Luxury residential renovation" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBENr_luWVE7orF9rd0CeGGSKIUvghawGlQT1Lu0t9Qi4Kq4eFikL4ljH8ucrTypUMkKgy96zvF5z_Z37CtkySy2z1R1oEtgdjoWMkX7d7HWT67CjRvBmtMO8nov6EB3_NOV8qPYGTRfDHMcFAMEk5L2Is3EE6d3rrP1bSvGWUUzxJFzg5VONdycKGF_6opnr7pm1A5xD28gC0Q3Ixf5YppkCGwcfVIbkc68k-rqsdaGYwLOfsTq_KFdFGxfqiKsEMKKE30R5BF0KOo" />
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section class="bg-navy-corp py-24 text-white">
+            <div class="max-w-[1200px] mx-auto px-4">
+                <div class="text-center mb-20">
+                    <h2 class="text-3xl font-black mb-4 uppercase tracking-wider text-lime-green">Por qué elegir Capitel
+                    </h2>
+                    <p class="text-white/60 max-w-2xl mx-auto">Nuestra metodología combina rigor industrial con
+                        eficiencia operativa para garantizar resultados excepcionales.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-12 text-center">
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="size-20 bg-lime-green/10 rounded-2xl flex items-center justify-center mb-6 border border-lime-green/20">
+                            <span class="material-symbols-outlined text-lime-green text-4xl">verified</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Ingeniería Certificada</h3>
+                        <p class="text-white/50 text-sm">Todos nuestros procesos están avalados por ingenieros
+                            estructurales colegiados.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="size-20 bg-lime-green/10 rounded-2xl flex items-center justify-center mb-6 border border-lime-green/20">
+                            <span class="material-symbols-outlined text-lime-green text-4xl">timer</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Eficiencia en Tiempos</h3>
+                        <p class="text-white/50 text-sm">Planificación milimétrica para minimizar el impacto en sus
+                            operaciones diarias.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div
+                            class="size-20 bg-lime-green/10 rounded-2xl flex items-center justify-center mb-6 border border-lime-green/20">
+                            <span class="material-symbols-outlined text-lime-green text-4xl">high_quality</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 text-white">Materiales Premium</h3>
+                        <p class="text-white/50 text-sm">Utilizamos suministros de grado industrial con certificaciones
+                            internacionales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-white">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <div
+                    class="bg-navy-corp rounded-3xl p-12 text-center shadow-2xl flex flex-col items-center border border-white/10">
+                    <h2 class="text-white text-3xl md:text-4xl font-black mb-6">¿Listo para comenzar su proyecto?</h2>
+                    <p class="text-white/80 text-lg mb-10 max-w-xl font-medium">Contáctenos hoy mismo para una
+                        evaluación técnica exhaustiva y personalizada.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button
+                            class="bg-lime-green text-navy-corp px-10 py-4 rounded-xl font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                            Hablar con un Experto
+                            <span class="material-symbols-outlined">call</span>
+                        </button>
+                        <button
+                            class="bg-white/10 text-white border border-white/20 px-10 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">
+                            Enviar un Mensaje
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-navy-corp text-white/60 py-16 px-6 lg:px-40 border-t border-white/5">
+        <div class="max-w-[1200px] mx-auto grid md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <div class="flex items-center gap-2 text-white mb-6 ">
+                    <div class="w-10 h-10 bg-[url('/assets/image.png')] bg-contain bg-center bg-no-repeat rounded-full"></div>
+                    <h2 class="text-lg font-black tracking-tight uppercase text-white">Capitel Soluciones</h2>
+                </div>
+                <p class="max-w-md mb-6 leading-relaxed">
+                    Líderes en ingeniería de refuerzo y remodelación estructural. Comprometidos con la seguridad y la
+                    innovación constructiva en cada obra a nivel nacional.
+                </p>
+                <div class="flex gap-4">
+                    <a class="size-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-primary hover:text-navy-corp transition-all"
+                        href="#"><span class="material-symbols-outlined text-xl">social_leaderboard</span></a>
+                    <a class="size-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-primary hover:text-navy-corp transition-all"
+                        href="#"><span class="material-symbols-outlined text-xl">group</span></a>
+                    <a class="size-10 rounded-lg bg-white/5 flex items-center justify-center hover:bg-primary hover:text-navy-corp transition-all"
+                        href="#"><span class="material-symbols-outlined text-xl">mail</span></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Servicios</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a class="hover:text-primary transition-colors" href="#">Refuerzo Estructural</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Remodelación Comercial</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Renovación Residencial</a></li>
+                    <li><a class="hover:text-primary transition-colors" href="#">Consultoría Técnica</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contacto</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+                        <span>Av. Principal de Ingeniería, 452<br />Ciudad de México, CP 01234</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl">call</span>
+                        <span>+52 55 1234 5678</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-xl">mail</span>
+                        <span>contacto@capitelsoluciones.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-[1200px] mx-auto border-t border-white/5 mt-16 pt-8 text-center text-xs">
+            © 2024 Capitel Soluciones Estructurales. Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+
+</html>

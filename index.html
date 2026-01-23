@@ -1,0 +1,461 @@
+<!doctype html>
+<html class="light" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Capitel Soluciones - Structural Renovations</title>
+  <script src="src/app.js" defer></script>
+  <link rel="stylesheet" href="src/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+
+<body
+  class="bg-background-light dark:bg-background-dark font-display text-[#0d141b] dark:text-slate-100 transition-colors duration-300">
+  <header class="sticky-nav w-full border-b border-solid border-primary/10 bg-primary px-4 md:px-10 py-3 relative">
+    <div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2">
+          <div class="size-10 rounded-full bg-white p-1 flex items-center justify-center">
+            <div class="size-full bg-[url('/assets/image.png')] bg-contain bg-center bg-no-repeat rounded-full"></div>
+          </div>
+          <div class="flex flex-col">
+            <h2 class="text-white text-lg font-black leading-none tracking-tight">
+              CAPITEL
+            </h2>
+            <span class="text-accent-lime text-xs font-bold leading-none tracking-[0.1em]">
+              SOLUCIONES
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu (Desktop + Mobile container) -->
+      <div id="mobile-menu" class="
+        absolute top-full left-0 w-full
+        bg-primary border-t border-primary/20
+        overflow-hidden
+
+        max-h-0 opacity-0
+        transition-all duration-300 ease-in-out
+
+        px-6 py-6 flex flex-col gap-6
+
+        lg:static lg:flex lg:flex-1 lg:flex-row lg:justify-end lg:items-center lg:gap-10
+        lg:max-h-none lg:opacity-100
+        lg:border-0 lg:p-0
+      ">
+        <!-- Links -->
+        <nav class="flex flex-col lg:flex-row gap-6 lg:gap-8">
+          <a href="index.html" class="text-accent-lime text-sm font-bold leading-normal tracking-wider">
+            Inicio
+          </a>
+          <a href="servicios.html" class="text-white/90 text-sm font-medium leading-normal hover:text-accent-lime transition-colors">
+            Servicios
+          </a>
+          <a href="#" class="text-white/90 text-sm font-medium leading-normal hover:text-accent-lime transition-colors">
+            Proyectos
+          </a>
+          <a href="#" class="text-white/90 text-sm font-medium leading-normal hover:text-accent-lime transition-colors">
+            Nosotros
+          </a>
+        </nav>
+
+        <!-- Contact button -->
+        <div class="flex items-center gap-4 lg:border-l border-white/20 lg:pl-10">
+          <button
+            class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-accent-lime text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+            Contacto
+          </button>
+        </div>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="lg:hidden flex items-center text-white">
+        <button id="menu-toggle" aria-label="Abrir menú" data-open="false">
+          <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+  <main class="flex flex-col">
+    <section class="w-full px-4 md:px-10 py-6">
+      <div class="max-w-[1280px] mx-auto">
+        <div
+          class="relative min-h-[600px] flex flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-start justify-center px-6 md:px-20 overflow-hidden"
+          style="
+              background-image:
+                linear-gradient(
+                  to right,
+                  rgba(42, 45, 84, 0.9) 0%,
+                  rgba(42, 45, 84, 0.4) 50%,
+                  rgba(0, 0, 0, 0.2) 100%
+                ),
+                url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuATeTr_sDecI_Ev6W3N7yQ0-pa85zZ_uomGzA9U0WlAwBok5zcXXtIJIG1cw5pVf3bC0oAZOQ8DCBbGxa_PlC-4tdLGQSO3qfDyhyjHydJcSJRVnX2DFUTjfWHWszp2SXJHkmKdVEH6m1oBxrUyfCYaztemFF-NvAz_DAbsWzc1MYjUOcLL2QCRHc9RGLALWRi_doiiZTfPtcArw0rz73bhrvODUO5rrYXrF_Q4bw7u4spdQzbBxS8RCBntYGHsxe5qCMKbQ-R2TgmS&quot;);
+            ">
+          <div
+            class="absolute top-0 right-0 w-32 h-full bg-accent-lime/10 skew-x-[-15deg] translate-x-16 pointer-events-none">
+          </div>
+          <div class="flex flex-col gap-6 text-left max-w-2xl z-10">
+            <div class="flex items-center gap-2 text-accent-lime font-bold text-sm uppercase tracking-[0.2em]">
+              <span class="w-8 h-[2px] bg-accent-lime"></span>
+              Excelencia en Construcción
+            </div>
+            <h1 class="text-white text-5xl md:text-7xl font-black leading-[1.1] tracking-[-0.033em]">
+              Transformamos tus espacios con
+              <span class="text-accent-lime">solidez</span> y diseño
+            </h1>
+            <p class="text-white/80 text-lg md:text-xl font-normal leading-relaxed">
+              Especialistas en renovaciones estructurales y construcción para
+              propiedades comerciales y residenciales con los más altos
+              estándares de calidad y seguridad industrial.
+            </p>
+            <div class="flex flex-wrap gap-4 mt-4">
+              <button
+                class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-accent-lime text-primary text-base font-bold leading-normal tracking-[0.015em] hover:scale-105 transition-transform shadow-lg shadow-accent-lime/20">
+                Solicitar cotización
+              </button>
+              <button
+                class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-white/10 backdrop-blur-md border border-white/20 text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-white/20 transition-all">
+                Ver proyectos
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="max-w-[1280px] mx-auto w-full px-10 py-12">
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-y border-slate-200 dark:border-slate-800 py-10">
+        <div class="flex flex-col items-center text-center">
+          <span class="text-3xl font-black text-primary dark:text-accent-lime">15+</span>
+          <span class="text-sm font-medium text-slate-500 uppercase tracking-widest mt-1">Años de
+            Experiencia</span>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <span class="text-3xl font-black text-primary dark:text-accent-lime">500+</span>
+          <span class="text-sm font-medium text-slate-500 uppercase tracking-widest mt-1">Proyectos
+            Listos</span>
+        </div>
+        <div class="flex flex-col items-center text-center">
+          <span class="text-3xl font-black text-primary dark:text-accent-lime">100%</span>
+          <span class="text-sm font-medium text-slate-500 uppercase tracking-widest mt-1">Seguridad
+            Garantizada</span>
+        </div>
+      </div>
+    </section>
+    <section class="w-full px-4 md:px-10 py-16 bg-white dark:bg-[#151f2b]">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="flex flex-col gap-4 mb-12">
+          <h2 class="text-accent-lime text-sm font-bold uppercase tracking-[0.3em]">
+            Servicios
+          </h2>
+          <h3 class="text-primary dark:text-white text-4xl md:text-5xl font-black leading-tight">
+            Nuestros Pilares Estructurales
+          </h3>
+          <p class="text-slate-500 dark:text-slate-400 text-lg max-w-[720px]">
+            Ofrecemos soluciones integrales de ingeniería y diseño adaptadas a
+            las exigencias operativas de cada sector.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div
+            class="group relative flex flex-col gap-6 p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800 hover:border-accent-lime transition-all duration-300">
+            <div class="w-full aspect-video bg-cover bg-center rounded-xl overflow-hidden shadow-lg" style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDDFtKtdkisls2OISZQgbmqkWtW_8R7mqlcj7pXNYb1gb-4FksPxYf29tIqWKVu_qpkdVUSzAFguXVd8wTa0ZbVepBk-ght0DXjXPR_TYwZPYkGjfT3vAW6nrcoyrI9KajFSGe2-0VsqaMeCDRcQM315Apo6Yj4uuhq6HAScisKGNgJvLfM62WMIPmQMWWvbwc2DF3eV7QXeMbEHsZ1M3dJzlBAPEP-pGDOGvDPfeAjp6Np_aX13-7vsmaRFHdT0VtpwPdFBLwQB-tL&quot;);
+                ">
+              <div class="w-full h-full bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-4">
+                <div class="size-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-3xl">corporate_fare</span>
+                </div>
+                <h4 class="text-2xl font-bold text-primary dark:text-white">
+                  Renovaciones Comerciales
+                </h4>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                Retrofitting estructural, remodelación de oficinas
+                corporativas y mejoras industriales. Nos enfocamos en la
+                eficiencia y la mínima interrupción operativa para su negocio.
+              </p>
+              <ul class="flex flex-col gap-2">
+                <li class="flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                  <span class="material-symbols-outlined text-accent-lime text-lg">check_circle</span>
+                  Refuerzo de vigas y columnas
+                </li>
+                <li class="flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                  <span class="material-symbols-outlined text-accent-lime text-lg">check_circle</span>
+                  Modernización de fachadas
+                </li>
+              </ul>
+              <a class="mt-4 flex items-center gap-2 text-primary dark:text-accent-lime font-bold hover:gap-4 transition-all uppercase text-xs tracking-widest"
+                href="#">
+                Saber más
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+          <div
+            class="group relative flex flex-col gap-6 p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-slate-200 dark:border-slate-800 hover:border-accent-lime transition-all duration-300">
+            <div class="w-full aspect-video bg-cover bg-center rounded-xl overflow-hidden shadow-lg" style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBABetg7HqI2BvVHXNPaMEWsxlUsF4xmRfpqs06KFj6ioOvzzNaqfVpIFn-Kz1Wz_96FPzrv3Qm5yGEqR4zjLVro_ZRZAQrExWbi63Idpe1LNUSTNWnkqtB-W74Sc9tcUVo96h79UcYEPsDlsMgu1xxYVnIqEKSjWU2NARrti4gSjD9zbZggJOAfuv7sQ43HOjShsqlk-sXKH6FveRJftSZOks_LE2EusfXxrQYmKh9AIhGox900Mm-LQkjuV_sW-LVVkTvQXRlNM2N&quot;);
+                ">
+              <div class="w-full h-full bg-accent-lime/10 group-hover:bg-transparent transition-colors">
+              </div>
+            </div>
+            <div class="flex flex-col gap-4">
+              <div class="flex items-center gap-4">
+                <div class="size-12 rounded-lg bg-accent-lime/20 text-accent-lime flex items-center justify-center">
+                  <span class="material-symbols-outlined text-3xl">home_work</span>
+                </div>
+                <h4 class="text-2xl font-bold text-primary dark:text-white">
+                  Renovaciones Residenciales
+                </h4>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                Ampliaciones de vivienda, cambios estructurales modernos y
+                cimentaciones de alta resistencia. Convertimos su hogar en un
+                espacio seguro y estéticamente superior.
+              </p>
+              <ul class="flex flex-col gap-2">
+                <li class="flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                  <span class="material-symbols-outlined text-accent-lime text-lg">check_circle</span>
+                  Conceptos de planta abierta
+                </li>
+                <li class="flex items-center gap-2 text-sm font-medium text-slate-700 dark:text-slate-300">
+                  <span class="material-symbols-outlined text-accent-lime text-lg">check_circle</span>
+                  Sótano y cimentación
+                </li>
+              </ul>
+              <a class="mt-4 flex items-center gap-2 text-accent-lime font-bold hover:gap-4 transition-all uppercase text-xs tracking-widest"
+                href="#">
+                Saber más
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full px-4 md:px-10 pt-20 pb-6">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-end gap-6">
+        <div class="flex flex-col gap-2">
+          <h2 class="text-primary dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-tight px-0">
+            Proyectos Destacados
+          </h2>
+          <div class="w-20 h-1 bg-accent-lime"></div>
+        </div>
+        <button
+          class="text-sm font-bold text-slate-500 uppercase tracking-widest hover:text-accent-lime transition-colors">
+          Ver Galería Completa
+        </button>
+      </div>
+    </section>
+    <section class="w-full px-4 md:px-10 pb-20">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            class="group relative overflow-hidden bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-8 aspect-[4/3] transition-all duration-500 hover:scale-[1.02]"
+            style="
+                background-image:
+                  linear-gradient(
+                    0deg,
+                    rgba(42, 45, 84, 0.95) 0%,
+                    rgba(0, 0, 0, 0) 50%
+                  ),
+                  url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDeeDN16KSZd30DchLckAJ0lShO9zZrJEKDROn4g4-dZkhZFe7XAm98wtkUq0wwER9INesYAK0ovPvzAdvYMz03QY0DYRzMN1lS3eWbpK5fNrHcZ5vI3FYnmzm5hIziSKwsDNeiVyUwV7iyYB7Es-uR6mVp2MNZeDiOppa-BATwwI_wbxc0qohxO1kVsTq69DSO1gmnHdeXal1u7wT5xJwnfcE38g31BVWY6twuBNkry8VdbTZ7e8xFuJjzDoysqcmrdP1EU3cp338E&quot;);
+              ">
+            <span
+              class="absolute top-6 left-6 bg-accent-lime text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Comercial</span>
+            <div>
+              <p class="text-white text-2xl font-bold leading-tight line-clamp-2">
+                Corporativo Alpha
+              </p>
+              <p class="text-accent-lime/80 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                Renovación integral de 5,000 m2
+              </p>
+            </div>
+          </div>
+          <div
+            class="group relative overflow-hidden bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-8 aspect-[4/3] transition-all duration-500 hover:scale-[1.02]"
+            style="
+                background-image:
+                  linear-gradient(
+                    0deg,
+                    rgba(42, 45, 84, 0.95) 0%,
+                    rgba(0, 0, 0, 0) 50%
+                  ),
+                  url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuANVdojjcIQQXvQsNtF8eefaWaHLbUgYj9m7eb5tCDbdxKXXvIynbswsFrskQQFSgHM3WGgrcBOseAzwds_nlFI9pghNDqkfKkUg54pfJclecLXJG-iVe1OOYuf4yj5hYvReaSgaz5clHt8_-fp7M7G4WI7Z0s3lr1IkxVbLshnSO_u7_Usdr49Y9-L9XyqvLGIjvstKJQpdhC6MGZBhqx5cx31FbZfcZGEpHXIgu7EfFat72gjM1gPuNK9EwvE2LFwWt8taeS_kYMy&quot;);
+              ">
+            <span
+              class="absolute top-6 left-6 bg-white text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Residencial</span>
+            <div>
+              <p class="text-white text-2xl font-bold leading-tight line-clamp-2">
+                Residencia Valle
+              </p>
+              <p class="text-accent-lime text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                Expansión estructural de lujo
+              </p>
+            </div>
+          </div>
+          <div
+            class="group relative overflow-hidden bg-cover bg-center flex flex-col gap-3 rounded-xl justify-end p-8 aspect-[4/3] transition-all duration-500 hover:scale-[1.02]"
+            style="
+                background-image:
+                  linear-gradient(
+                    0deg,
+                    rgba(42, 45, 84, 0.95) 0%,
+                    rgba(0, 0, 0, 0) 50%
+                  ),
+                  url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCqi5qjZBhjGMD1KsErsino2AfYuj1ZqF96eXpLoCk3Cv-R-kATzH3ZSzQ3Sm8rpjzFREelqsvTuyhUavkbi4SvWkQKFUCzqaP6Iw8cpTxQjp4o4IdymD2v1J-DA_-BkCZTEOSETvjhrY2NUCRLPQIq0TKUEQ0Ryyv-crf4gwu3tKg_MFCrXHoWliMBkaFOfewRZoAhyIGU5M7lSOTAKM5yKk5LlCQXZngcTS1rN9CmTz3yfaLNzdrfH0_mj7jQUlp3VQCXG2YXSr4b&quot;);
+              ">
+            <span
+              class="absolute top-6 left-6 bg-accent-lime text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Industrial</span>
+            <div>
+              <p class="text-white text-2xl font-bold leading-tight line-clamp-2">
+                Centro Industrial Sigma
+              </p>
+              <p class="text-accent-lime/80 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                Refuerzo estructural de carga pesada
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full px-4 md:px-10 py-20 bg-primary">
+      <div
+        class="max-w-[1280px] mx-auto bg-white/5 border border-white/10 rounded-2xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10">
+        <div class="text-center md:text-left flex flex-col gap-4 max-w-xl">
+          <h2 class="text-white text-4xl md:text-5xl font-black leading-tight">
+            ¿Listo para iniciar su próximo proyecto?
+          </h2>
+          <p class="text-white/70 text-lg">
+            Hable con nuestros ingenieros hoy mismo y reciba una asesoría
+            estructural completa sin compromiso.
+          </p>
+        </div>
+        <button
+          class="bg-accent-lime text-primary font-black px-10 py-5 rounded-lg text-lg hover:brightness-110 transition-colors shadow-xl shadow-accent-lime/10">
+          Agendar Consultoría
+        </button>
+      </div>
+    </section>
+  </main>
+  <footer
+    class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pt-20 pb-10 px-4 md:px-10">
+    <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <!-- Brand -->
+      <div class="flex flex-col gap-6">
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary p-1">
+            <div class="size-full bg-[url('/assets/image.png')] bg-contain bg-center bg-no-repeat rounded-full"></div>
+          </div>
+          <div class="flex flex-col">
+            <h2 class="text-primary dark:text-white text-sm font-black leading-none uppercase">
+              Capitel
+            </h2>
+            <span class="text-accent-lime text-[10px] font-bold leading-none uppercase tracking-widest">
+              Soluciones
+            </span>
+          </div>
+        </div>
+
+        <p class="text-slate-500 text-sm leading-relaxed">
+          Líderes en ingeniería estructural y renovaciones de alto nivel.
+          Construyendo el futuro sobre bases sólidas desde el 2008.
+        </p>
+
+        <div class="flex gap-4">
+          <div
+            class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-accent-lime transition-colors cursor-pointer">
+            <span class="material-symbols-outlined">share</span>
+          </div>
+          <div
+            class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-accent-lime transition-colors cursor-pointer">
+            <span class="material-symbols-outlined">mail</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navegación -->
+      <div class="flex flex-col gap-3">
+        <h4 class="text-sm font-black uppercase text-primary dark:text-white tracking-widest">
+          Navegación
+        </h4>
+        <ul class="flex flex-col gap-4 text-sm text-slate-500">
+          <li>
+            <a class="hover:text-accent-lime transition-colors" href="#">Inicio</a>
+          </li>
+          <li>
+            <a class="hover:text-accent-lime transition-colors" href="#">Servicios</a>
+          </li>
+          <li>
+            <a class="hover:text-accent-lime transition-colors" href="#">Proyectos</a>
+          </li>
+          <li>
+            <a class="hover:text-accent-lime transition-colors" href="#">Nosotros</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contacto (CON ICONOS, MISMA ESTRUCTURA) -->
+      <div class="flex flex-col gap-3">
+        <h4 class="text-sm font-black uppercase text-primary dark:text-white tracking-widest">
+          Contacto
+        </h4>
+        <ul class="flex flex-col gap-4 text-sm text-slate-500">
+          <li class="flex gap-3 items-start">
+            <span class="material-symbols-outlined text-primary text-lg">
+              location_on
+            </span>
+            <span>
+              Cl 35 #12-52 Ofic. 213 BGA, Centro, Bucaramanga, Santander
+            </span>
+          </li>
+          <li class="flex gap-3 items-center">
+            <span class="material-symbols-outlined text-primary text-lg">
+              call
+            </span>
+            <span>+52 55 1234 5678</span>
+          </li>
+          <li class="flex gap-3 items-center">
+            <span class="material-symbols-outlined text-primary text-lg">
+              mail
+            </span>
+            <span>gerenciacapitelsoluciones@gmail.com</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Ubicación -->
+      <div class="flex flex-col gap-6">
+        <h4 class="text-sm font-black uppercase text-primary dark:text-white tracking-widest">
+          Ubicación
+        </h4>
+        <div class="rounded-lg overflow-hidden h-32 w-full bg-slate-200">
+          <div class="w-full h-full bg-cover bg-center" style="background-image: url('/assets/location.png');"></div>
+        </div>
+        <p class="text-sm text-slate-500">
+          Cl 35 #12-52 Ofic. 213 BGA, Centro, Bucaramanga, Santander
+        </p>
+      </div>
+
+    </div>
+
+    <div
+      class="max-w-7xl mx-auto mt-20 pt-10 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-400 font-medium uppercase tracking-[0.2em]">
+      © 2024 CAPITEL SOLUCIONES. Todos los derechos reservados.
+    </div>
+  </footer>
+</body>
+
+</html>
