@@ -1,43 +1,48 @@
 @import "tailwindcss";
 
-
-.material-symbols-outlined {
-    font-variation-settings:
-        "FILL" 0,
-        "wght" 400,
-        "GRAD" 0,
-        "opsz" 24;
-}
-
-.sticky-nav {
-    position: sticky;
-    top: 0;
-    z-index: 50;
-}
-
-
 @theme {
-    --color-primary: #2a2d54;
-    --color-accent-lime: #93c03e;
-    --color-lime-green: #80e619;
-    --color-background-light: #f8fafc;
-    --color-background-dark: #101922;
+  /* En v4, las variables se definen así y generan clases automáticas */
+  --color-primary-lime: #6db15f;
+  --color-navy-dark: #0a1e35;
+  --color-navy-deep: #071526;
+  --color-accent-lime: #a3e635;
+  --color-background-light: #f8fafc;
+  --color-navy-corp: #0A192F;
+  
+  --font-display: "Inter", sans-serif;
 
-    --color-navy-corp: #0A192F;
-    
-    --font-display: "Inter", sans-serif;
-
-    --radius-default: 0.25rem;
-    --radius-lg: 0.5rem;
-    --radius-xl: 0.75rem;
-    --radius-full: 9999px;
+  --radius-default: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
 }
 
+/* Estilos de base */
 @layer base {
+  h1, h2, h3 {
+    @apply text-[--color-navy-corp];
+  }
+}
 
-    h1,
-    h2,
-    h3 {
-        @apply text-navy-corp;
-    }
+/* Utilidades y lógica personalizada */
+@layer utilities {
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  }
+
+  .sticky-nav {
+    @apply sticky top-0 z-50;
+  }
+
+  /* Lógica Before/After */
+  .before-after-container:hover .after-image {
+    opacity: 0;
+  }
+  .before-after-container .before-image {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .before-after-container:hover .before-image {
+    opacity: 1;
+  }
 }
