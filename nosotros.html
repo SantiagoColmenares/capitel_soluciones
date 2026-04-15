@@ -1,95 +1,97 @@
 <!DOCTYPE html>
-<html class="light" lang="es">
+<html class="light" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <script src="src/app.js" defer></script>
+    <title>Capitel Soluciones - Nuestros Proyectos</title>
+    <script src="src/app.js" defer></script>
     <link rel="stylesheet" href="src/output.css">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
-        rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+    rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#0d1b3e", // Navy Blue from logo
-                        "navy-custom": "#0d1b3e",
-                        "lime-custom": "#65a30d", // Adjusted lime green for accessibility/consistency with logo green
-                        "brand-lime": "#bef264",
-                        "background-light": "#f8fafc",
-                        "background-dark": "#0a0f1a",
-                    },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                },
-            },
-        }
-    </script>
-    <style type="text/tailwindcss">
-        :root {
-            --primary-navy: #0d1b3e;
-            --accent-lime: #bef264;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
 </head>
 
-<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-gray-100">
-    <header class="sticky top-0 z-50 bg-navy-custom text-white shadow-lg">
-        <div class="max-w-[1200px] mx-auto flex items-center justify-between px-6 py-4">
-            <div class="flex items-center gap-4">
-                <div class="size-8 text-brand-lime">
-                    <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                        <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z"
-                            fill-rule="evenodd"></path>
-                    </svg>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-gray-100 font-display">
+    <header
+        class="sticky-nav w-full border-b border-solid border-primary/10 bg-primary px-4 md:px-10 py-3 relative bg-navy-corp">
+        <div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2">
+                    <div class="size-10 rounded-full bg-white p-1 flex items-center justify-center">
+                        <div
+                            class="size-full bg-[url('/assets/image.png')] bg-contain bg-center bg-no-repeat rounded-full">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h2 class="text-white text-lg font-black leading-none tracking-tight">
+                            CAPITEL
+                        </h2>
+                        <span class="text-primary-lime text-xs font-bold leading-none tracking-[0.1em]">
+                            SOLUCIONES
+                        </span>
+                    </div>
                 </div>
-                <h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em] font-display">CAPITEL</h2>
             </div>
-            <div class="flex flex-1 justify-end gap-8">
-                <nav class="hidden md:flex items-center gap-9">
-                    <a class="text-sm font-medium text-white/80 hover:text-brand-lime transition-colors"
-                        href="#">Inicio</a>
-                    <a class="text-sm font-medium text-white/80 hover:text-brand-lime transition-colors"
-                        href="#">Proyectos</a>
-                    <a class="text-brand-lime text-sm font-bold border-b-2 border-brand-lime pb-1" href="#">Sobre
-                        Nosotros</a>
-                    <a class="text-sm font-medium text-white/80 hover:text-brand-lime transition-colors"
-                        href="#">Servicios</a>
-                    <a class="text-sm font-medium text-white/80 hover:text-brand-lime transition-colors"
-                        href="#">Contacto</a>
+
+            <!-- Menu (Desktop + Mobile container) -->
+            <div id="mobile-menu" class="
+        absolute top-full left-0 w-full
+        bg-primary border-t border-primary/20
+        overflow-hidden
+
+        max-h-0 opacity-0
+        transition-all duration-300 ease-in-out
+
+        px-6 py-6 flex flex-col gap-6
+
+        lg:static lg:flex lg:flex-1 lg:flex-row lg:justify-end lg:items-center lg:gap-10
+        lg:max-h-none lg:opacity-100
+        lg:border-0 lg:p-0
+      ">
+                <!-- Links -->
+                <nav class="flex flex-col lg:flex-row gap-6 lg:gap-8">
+                    <a href="index.html"
+                        class="text-white/90 text-sm font-bold leading-normal hover:text-accent-lime tracking-wider">
+                        Inicio
+                    </a>
+                    <a href="servicios.html"
+                        class="text-white/90 text-sm font-medium leading-normal hover:text-accent-lime transition-colors">
+                        Servicios
+                    </a>
+                    <a href="proyectos.html"
+                        class="text-white/90 text-sm font-medium leading-normal hover:text-accent-lime transition-colors">
+                        Proyectos
+                    </a>
+                    <a href="nosotros.html"
+                        class="text-brand-lime text-sm font-medium leading-normal hover:text-accent-lime transition-colors">
+                        Nosotros
+                    </a>
                 </nav>
-                <button
-                    class="flex min-w-[130px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-brand-lime text-navy-custom text-sm font-bold hover:brightness-110 transition-all">
-                    Presupuesto
+
+                <!-- Contact button -->
+                <div class="flex items-center gap-4 lg:border-l border-white/20 lg:pl-10">
+                    <button
+                        class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-accent-lime text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+                        <a href="contacto.html">Contacto</a>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hamburger -->
+            <div class="lg:hidden flex items-center text-white">
+                <button id="menu-toggle" aria-label="Abrir menú" data-open="false">
+                    <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
                 </button>
             </div>
+
         </div>
     </header>
     <main class="max-w-[1200px] mx-auto px-6">
-        <nav class="flex flex-wrap gap-2 py-6">
-            <a class="text-navy-custom dark:text-gray-400 text-sm font-medium hover:text-lime-700" href="#">Inicio</a>
-            <span class="text-gray-400 text-sm font-medium">/</span>
-            <span class="text-gray-500 dark:text-gray-500 text-sm font-medium">Sobre Nosotros</span>
-        </nav>
         <section class="py-12 md:py-20">
             <div class="flex flex-col lg:flex-row gap-12 items-center">
                 <div class="w-full lg:w-1/2 aspect-[4/3] bg-center bg-no-repeat bg-cover rounded-xl shadow-2xl overflow-hidden"
@@ -186,10 +188,7 @@
                 <p class="text-gray-600 dark:text-gray-400 text-lg">Nuestro activo más valioso es el talento humano.
                     Contamos con especialistas titulados y con amplia experiencia en obra civil y edificación.</p>
             </div>
-            <button
-                class="bg-navy-custom text-brand-lime font-bold px-8 py-3 rounded-lg hover:bg-navy-custom/90 transition-all border border-navy-custom">
-                Ver vacantes
-            </button>
+
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
             <div class="flex flex-col group">
@@ -262,32 +261,113 @@
             </div>
         </div>
     </section>
-    <footer class="bg-navy-custom text-white py-16">
-        <div class="max-w-[1200px] mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
-                <div class="flex items-center gap-3">
-                    <div class="size-8 text-brand-lime">
-                        <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                            <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z"
-                                fill-rule="evenodd"></path>
-                        </svg>
+    <footer
+        class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pt-20 pb-10 px-4 md:px-10">
+        <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <!-- Brand -->
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary p-1">
+                        <div
+                            class="size-full bg-[url('/assets/image.png')] bg-contain bg-center bg-no-repeat rounded-full">
+                        </div>
                     </div>
-                    <span class="font-black text-2xl tracking-tight">CAPITEL SOLUCIONES</span>
+                    <div class="flex flex-col">
+                        <h2 class="text-primary dark:text-white text-sm font-black leading-none uppercase">
+                            Capitel
+                        </h2>
+                        <span class="text-accent-lime text-[10px] font-bold leading-none uppercase tracking-widest">
+                            Soluciones
+                        </span>
+                    </div>
                 </div>
-                <div class="flex gap-10 text-sm font-bold uppercase tracking-widest text-white/60">
-                    <a class="hover:text-brand-lime transition-colors" href="#">Aviso Legal</a>
-                    <a class="hover:text-brand-lime transition-colors" href="#">Privacidad</a>
-                    <a class="hover:text-brand-lime transition-colors" href="#">Cookies</a>
-                </div>
-            </div>
-            <div
-                class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
-                <div>© 2024 Capitel Soluciones. Ingeniería y Construcción de Vanguardia.</div>
+
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    Líderes en ingeniería estructural y renovaciones de alto nivel.
+                    Construyendo el futuro sobre bases sólidas desde el 2008.
+                </p>
+
                 <div class="flex gap-4">
-                    <span class="material-symbols-outlined !text-xl hover:text-brand-lime cursor-pointer">share</span>
-                    <span class="material-symbols-outlined !text-xl hover:text-brand-lime cursor-pointer">mail</span>
+                    <div
+                        class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-accent-lime transition-colors cursor-pointer">
+                        <span class="material-symbols-outlined">share</span>
+                    </div>
+                    <div
+                        class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-accent-lime transition-colors cursor-pointer">
+                        <span class="material-symbols-outlined">mail</span>
+                    </div>
                 </div>
             </div>
+
+            <!-- Navegación -->
+            <div class="flex flex-col gap-3">
+                <h4 class="text-sm font-black uppercase text-primary dark:text-white tracking-widest">
+                    Navegación
+                </h4>
+                <ul class="flex flex-col gap-4 text-sm text-slate-500">
+                    <li>
+                        <a class="hover:text-accent-lime transition-colors" href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-accent-lime transition-colors" href="servicios.html">Servicios</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-accent-lime transition-colors" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-accent-lime transition-colors" href="nosotros.html">Proyectos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contacto (CON ICONOS, MISMA ESTRUCTURA) -->
+            <div class="flex flex-col gap-3">
+                <h4 class="text-sm font-black uppercase text-primary dark:text-white tracking-widest">
+                    Contacto
+                </h4>
+                <ul class="flex flex-col gap-4 text-sm text-slate-500">
+                    <li class="flex gap-3 items-start">
+                        <span class="material-symbols-outlined text-primary text-lg">
+                            location_on
+                        </span>
+                        <span>
+                            Cl 35 #12-52 Ofic. 213 BGA, Centro, Bucaramanga, Santander
+                        </span>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="material-symbols-outlined text-primary text-lg">
+                            call
+                        </span>
+                        <span>+57 316 7197406</span>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="material-symbols-outlined text-primary text-lg">
+                            mail
+                        </span>
+                        <span>gerenciacapitelsoluciones@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Ubicación -->
+            <div class="flex flex-col gap-6">
+                <h4 class="text-sm font-black uppercase text-primary dark:text-white tracking-widest">
+                    Ubicación
+                </h4>
+                <div class="rounded-lg overflow-hidden h-32 w-full bg-slate-200">
+                    <div class="w-full h-full bg-cover bg-center"
+                        style="background-image: url('/assets/location.png');"></div>
+                </div>
+                <p class="text-sm text-slate-500">
+                    Cl 35 #12-52 Ofic. 213 BGA, Centro, Bucaramanga, Santander
+                </p>
+            </div>
+
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto mt-20 pt-10 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-400 font-medium uppercase tracking-[0.2em]">
+            © 2024 CAPITEL SOLUCIONES. Todos los derechos reservados.
         </div>
     </footer>
 

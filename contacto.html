@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Capitel Soluciones - Inicio</title>
+    <script src="src/app.js" defer></script>
+    <link rel="stylesheet" href="src/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="bg-gray-50 text-navy-blue font-display">
+    <header
+        class="sticky-nav w-full border-b border-solid border-primary/10 bg-primary px-4 md:px-10 py-3 relative z-50">
+        <div class="max-w-[1280px] mx-auto flex items-center justify-between whitespace-nowrap">
+
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="flex items-center gap-2">
+                    <div class="size-10 rounded-full bg-white p-1 flex items-center justify-center">
+                        <div
+                            class="size-full bg-[url('/assets/image.png')] bg-contain bg-center bg-no-repeat rounded-full">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h2 class="text-white text-lg font-black leading-none tracking-tight">
+                            CAPITEL
+                        </h2>
+                        <span class="text-accent-lime text-xs font-bold leading-none tracking-[0.1em]">
+                            SOLUCIONES
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu (Desktop + Mobile container) -->
+            <div id="mobile-menu" class="
+        absolute top-full left-0 w-full
+        bg-primary border-t border-primary/20
+        overflow-hidden
+
+        max-h-0 opacity-0
+        transition-all duration-300 ease-in-out
+
+        px-6 py-6 flex flex-col gap-6
+
+        lg:static lg:flex lg:flex-1 lg:flex-row lg:justify-end lg:items-center lg:gap-10
+        lg:max-h-none lg:opacity-100
+        lg:border-0 lg:p-0
+      ">
+                <!-- Links -->
+                <nav class="flex flex-col lg:flex-row gap-6 lg:gap-8">
+                    <a href="index.html" class="text-white/90 text-sm font-bold leading-normal tracking-wider">
+                        Inicio
+                    </a>
+                    <a href="servicios.html"
+                        class="text-brand-lime text-sm font-medium leading-normal hover:text-accent-lime transition-colors">
+                        Servicios
+                    </a>
+                    <a href="proyectos.html"
+                        class="text-white/90 text-sm font-medium leading-normal hover:text-accent-lime transition-colors">
+                        Proyectos
+                    </a>
+                    <a href="nosotros.html"
+                        class="text-white/90 text-sm font-medium leading-normal hover:text-accent-lime transition-colors">
+                        Nosotros
+                    </a>
+                </nav>
+
+                <!-- Contact button -->
+                <div class="flex items-center gap-4 lg:border-l border-white/20 lg:pl-10">
+                    <button
+                        class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-accent-lime text-primary text-sm font-bold leading-normal tracking-[0.015em] hover:brightness-110 transition-all">
+                        <a href="contacto.html">Contacto</a>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hamburger -->
+            <div class="lg:hidden flex items-center text-white">
+                <button id="menu-toggle" aria-label="Abrir menú" data-open="false">
+                    <span id="menu-icon" class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto py-16 px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="space-y-12">
+            <section>
+                <h2 class="text-3xl font-bold mb-8 border-l-4 border-[var(--lime-green)] pl-4">Información de Contacto
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 rounded-full bg-white shadow-sm border border-gray-100">
+                            <span class="material-symbols-outlined text-[var(--lime-green)]">phone_in_talk</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm uppercase text-gray-500">Llámenos</p>
+                            <p class="text-xl font-semibold">+57 316 7197406</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 rounded-full bg-white shadow-sm border border-gray-100">
+                            <span class="material-symbols-outlined text-(--lime-green)]">mail</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm uppercase text-gray-500">Correo Electrónico</p>
+                            <p class="text-xl font-semibold">gerenciacapitelsoluciones@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="p-3 rounded-full bg-white shadow-sm border border-gray-100">
+                            <span class="material-symbols-outlined text-(--lime-green)]">location_on</span>
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm uppercase text-gray-500">Nuestra Sede</p>
+                            <p class="text-xl font-semibold">Cl 35 #12-52 Ofic. 213 Centro, Bucaramanga, Santander</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="rounded-xl overflow-hidden h-80 relative">
+                <iframe class="w-full h-full grayscale-0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3087.869054071502!2d-73.1286088!3d7.1177893999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f3e7a71fd3b%3A0xf60da60d733285aa!2sCAPITEL%20SOLUCIONES%20SAS%20%7C%20Empresa%20de%20construcci%C3%B3n%2C%20mantenimiento%20locativo%20y%20obras%20civiles!5e1!3m2!1ses-419!2sco!4v1774972311107!5m2!1ses-419!2sco"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" absolute inset-0 w-full h-full></iframe>
+                <div
+                    class="absolute bottom-4 left-4 bg-black/60 backdrop-blur-md text-white text-sm px-4 py-2 rounded-full shadow-lg border border-[var(--lime-green)]">
+                    📍 Localización Central
+                </div>
+            </section>
+        </div>
+        <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100">
+            <h3 class="text-2xl font-bold mb-6">Envíenos un mensaje</h3>
+            <form action="#" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-bold uppercase tracking-wide text-gray-600">Nombre</label>
+                        <input
+                            class="border-2 border-navy-blue rounded-lg p-3 focus:outline-none focus:border-[var(--lime-green)] focus:ring-0 transition-colors"
+                            placeholder="Su nombre" type="text" />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-bold uppercase tracking-wide text-gray-600">Email</label>
+                        <input
+                            class="border-2 border-navy-blue rounded-lg p-3 focus:outline-none focus:border-[var(--lime-green)] focus:ring-0 transition-colors"
+                            placeholder="correo@ejemplo.com" type="email" />
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-bold uppercase tracking-wide text-gray-600">Asunto</label>
+                    <input
+                        class="border-2 border-navy-blue rounded-lg p-3 focus:outline-none focus:border-[var(--lime-green)] focus:ring-0 transition-colors"
+                        placeholder="¿En qué podemos ayudarle?" type="text" />
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-bold uppercase tracking-wide text-gray-600">Mensaje</label>
+                    <textarea
+                        class="border-2 border-navy-blue rounded-lg p-3 focus:outline-none focus:border-[var(--lime-green)] focus:ring-0 transition-colors"
+                        placeholder="Describa su proyecto o consulta..." rows="5"></textarea>
+                </div>
+                <button
+                    class="w-full bg-accent-lime text-navy-blue font-black py-4 rounded-lg uppercase tracking-widest hover:brightness-110 transition-all flex items-center justify-center gap-2"
+                    type="submit">
+                    <span>Enviar Mensaje</span>
+                    <span class="material-symbols-outlined">send</span>
+                </button>
+            </form>
+        </div>
+    </main>
+    <footer
+        class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pt-20 pb-10 px-4 md:px-10">
+        <div class="max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <!-- Brand -->
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-primary p-1">
+                        <div
+                            class="size-full bg-[url('/assets/image.png')] bg-contain bg-center bg-no-repeat rounded-full">
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <h2 class="text-primary dark:text-white text-sm font-black leading-none uppercase">
+                            Capitel
+                        </h2>
+                        <span class="text-accent-lime text-[10px] font-bold leading-none uppercase tracking-widest">
+                            Soluciones
+                        </span>
+                    </div>
+                </div>
+
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    Líderes en ingeniería estructural y renovaciones de alto nivel.
+                    Construyendo el futuro sobre bases sólidas desde el 2008.
+                </p>
+
+                <div class="flex gap-4">
+                    <div
+                        class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-accent-lime transition-colors cursor-pointer">
+                        <span class="material-symbols-outlined">share</span>
+                    </div>
+                    <div
+                        class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-accent-lime transition-colors cursor-pointer">
+                        <span class="material-symbols-outlined">mail</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navegación -->
+            <div class="flex flex-col gap-3">
+                <h4 class="text-sm font-black uppercase text-primary dark:text-white tracking-widest">
+                    Navegación
+                </h4>
+                <ul class="flex flex-col gap-4 text-sm text-slate-500">
+                    <li>
+                        <a class="hover:text-accent-lime transition-colors" href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-accent-lime transition-colors" href="servicios.html">Servicios</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-accent-lime transition-colors" href="proyectos.html">Proyectos</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-accent-lime transition-colors" href="nosotros.html">Proyectos</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contacto (CON ICONOS, MISMA ESTRUCTURA) -->
+            <div class="flex flex-col gap-3">
+                <h4 class="text-sm font-black uppercase text-primary dark:text-white tracking-widest">
+                    Contacto
+                </h4>
+                <ul class="flex flex-col gap-4 text-sm text-slate-500">
+                    <li class="flex gap-3 items-start">
+                        <span class="material-symbols-outlined text-primary text-lg">
+                            location_on
+                        </span>
+                        <span>
+                            Cl 35 #12-52 Ofic. 213 BGA, Centro, Bucaramanga, Santander
+                        </span>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="material-symbols-outlined text-primary text-lg">
+                            call
+                        </span>
+                        <span>+57 316 7197406</span>
+                    </li>
+                    <li class="flex gap-3 items-center">
+                        <span class="material-symbols-outlined text-primary text-lg">
+                            mail
+                        </span>
+                        <span>gerenciacapitelsoluciones@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Ubicación -->
+            <div class="flex flex-col gap-6">
+                <h4 class="text-sm font-black uppercase text-primary dark:text-white tracking-widest">
+                    Ubicación
+                </h4>
+                <div class="rounded-lg overflow-hidden h-32 w-full bg-slate-200">
+                    <div class="w-full h-full bg-cover bg-center"
+                        style="background-image: url('/assets/location.png');"></div>
+                </div>
+                <p class="text-sm text-slate-500">
+                    Cl 35 #12-52 Ofic. 213 BGA, Centro, Bucaramanga, Santander
+                </p>
+            </div>
+
+        </div>
+
+        <div
+            class="max-w-7xl mx-auto mt-20 pt-10 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-400 font-medium uppercase tracking-[0.2em]">
+            © 2024 CAPITEL SOLUCIONES. Todos los derechos reservados.
+        </div>
+    </footer>
+
+</body>
+
+</html>
