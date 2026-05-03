@@ -31,7 +31,7 @@
                         <h2 class="text-white text-lg font-black leading-none tracking-tight">
                             CAPITEL
                         </h2>
-                        <span class="text-primary-lime text-xs font-bold leading-none -tracking-widest">
+                        <span class="text-accent-lime text-xs font-bold leading-none tracking-widest">
                             SOLUCIONES
                         </span>
                     </div>
@@ -94,7 +94,8 @@
         <div class="mb-12">
             <div class="flex flex-col gap-2">
                 <span class="text-primary-lime font-bold tracking-[0.2em] text-xs uppercase">Nuestros Proyectos</span>
-                <h1 class="text-4xl md:text-5xl font-black tracking-tight text-navy-dark mb-4">Resultados que respaldan nuestro trabajo
+                <h1 class="text-4xl md:text-5xl font-black tracking-tight text-navy-dark mb-4">Resultados que respaldan
+                    nuestro trabajo
                 </h1>
                 <p class="text-slate-600 text-lg max-w-2xl leading-relaxed">
                     Sea testigo de la transformación. Nuestro portafolio representa décadas de experiencia en
@@ -149,7 +150,6 @@
                 <dialog id="modal-arkanto"
                     class="backdrop:bg-navy-dark/80 backdrop:backdrop-blur-sm rounded-2xl shadow-2xl p-0 w-[95%] max-w-4xl fixed inset-0 m-auto overflow-hidden border-none">
                     <div class="flex flex-col max-h-[90vh] bg-white">
-
                         <!-- Header -->
                         <div class="flex justify-between items-center p-5 border-b bg-white z-20">
                             <h2 class="text-xl font-extrabold text-navy-dark uppercase">Zona Social Edificio Arkanto
@@ -164,29 +164,32 @@
 
                                 <!-- Tira de Imágenes -->
                                 <div id="slider-track" class="flex transition-transform duration-500 ease-out">
-                                    <!-- Puedes agregar todas las que quieras aquí -->
                                     <img src="./assets/terraza1.jpeg" class="min-w-full h-64 md:h-112.5 object-cover"
                                         alt="Vista 1">
                                     <img src="./assets/terraza1.jpeg" class="min-w-full h-64 md:h-112.5 object-cover"
                                         alt="Vista 2">
                                     <img src="./assets/terraza2.jpeg" class="min-w-full h-64 md:h-112.5 object-cover"
                                         alt="Vista 3">
+                                    <!-- Puedes agregar más <img> aquí y el contador se ajustará solo -->
                                 </div>
 
-                                <!-- Botones de Navegación -->
+                                <!-- Botones de Navegación (CORREGIDOS) -->
                                 <button onclick="prevSlide()"
-                                    class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-all">
-                                    <span class="material-symbols-outlined text-navy-dark">chevron_left</span>
-                                </button>
-                                <button onclick="nextSlide()"
-                                    class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-md transition-all">
-                                    <span class="material-symbols-outlined text-navy-dark">chevron_right</span>
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white w-10 h-10 rounded-full shadow-md transition-all flex items-center justify-center group/btn">
+                                    <span
+                                        class="material-symbols-outlined text-navy-dark group-hover/btn:scale-110 transition-transform">chevron_left</span>
                                 </button>
 
-                                <!-- Indicador de posición -->
+                                <button onclick="nextSlide()"
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white w-10 h-10 rounded-full shadow-md transition-all flex items-center justify-center group/btn">
+                                    <span
+                                        class="material-symbols-outlined text-navy-dark group-hover/btn:scale-110 transition-transform">chevron_right</span>
+                                </button>
+
+                                <!-- Indicador de posición (DINÁMICO) -->
                                 <div id="slide-counter"
-                                    class="absolute bottom-4 right-4 bg-navy-dark/70 text-white text-[10px] px-3 py-1 rounded-full font-bold">
-                                    1 / 3
+                                    class="absolute bottom-4 right-4 bg-navy-dark/70 text-white text-[10px] px-3 py-1 rounded-full font-bold z-20">
+                                    <!-- Se llena vía JS -->
                                 </div>
                             </div>
 
@@ -214,151 +217,260 @@
                 <div
                     class="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-xl before-after-container bg-slate-200 border border-slate-200">
                     <div class="absolute inset-0 bg-cover bg-center before-image transition-opacity duration-700"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWRMwkbhmalHWa2Jiyw9eSC159UL3DUEke36cQEGSgXyhi0FXxwuC9TydcP-6GlUGK3j6YnFtBgtWpTVFSScMJ2IoM7qnOEmEBytjQkkMHXkjHf2NR71ufcKy0rdkQGs5qBh17NRf2WlFZ8TJYxnbBYPzbOBVgIblacAfdAwEeF38hjWYCYZNFwmi0Z16KPj_GIu05XGONKEkeFBIba98VUStDoP7mgXOS03AFFMfXHKhefsPLERtLK4WHPkYOABx8VfkFtm-R9Iw3");'>
+                        style='background-image: url("./assets/terraza2.jpeg");'>
                         <div
                             class="absolute top-4 left-4 bg-navy-dark/90 text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                            Structural Issue</div>
+                            Estado Original</div>
                     </div>
                     <div class="absolute inset-0 bg-cover bg-center after-image transition-opacity duration-700"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbSy36OsUrF8TkTLJm-MMZtyQ4mOdP6bJ4YkbQlLlZeciQcAFbZJ3DL9lFZcK9UmWuoKTr4sjPjzYlw824w3WIw2Uh2MdtPIVLXRpA-b9FY0KhskPvyvbvui-tJrcU3_obW8kPe-q2iOfYz2u4RvjBCljzSxllpESf0QLRe0nt35m9FcsNDTPP6_UKKPZUW_a5FCGgf2Yp5XqAHiZEmoKaAGWUudcZFzpdmtaKLtozR5NH-dW0E-jrDiBjHnE0eLngANtyaZTVEz1e");'>
+                        style='background-image: url("./assets/terraza1.jpeg");'>
                         <div
                             class="absolute top-4 left-4 bg-primary-lime text-navy-dark text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                            Reinforced</div>
+                            Proyecto Finalizado</div>
                     </div>
                 </div>
+                <!-- Tu tarjeta de proyecto -->
                 <div class="px-2">
                     <div class="flex justify-between items-start mb-2">
                         <h3
                             class="text-xl font-extrabold text-navy-dark group-hover:text-primary-lime transition-colors">
-                            Central Plaza Base</h3>
-                        <span
-                            class="text-[10px] font-black bg-navy-dark text-white px-3 py-1 rounded-full uppercase tracking-wider">Structural</span>
+                            Zona Social Edificio Arkanto
+                        </h3>
+                        <!-- Cambiamos span por button y añadimos onclick -->
+                        <button onclick="openModal('modal-arkanto')"
+                            class="text-[10px] font-black bg-navy-dark text-white px-4 py-1 rounded-full uppercase tracking-wider text-center hover:bg-primary-lime transition-colors cursor-pointer">
+                            Ver Proyecto
+                        </button>
                     </div>
                     <div class="flex items-center gap-1.5 text-slate-500 text-sm font-medium">
                         <span class="material-symbols-outlined text-base text-primary-lime">location_on</span>
-                        <span>Barcelona, ES</span>
+                        <span>Santander, CO</span>
                     </div>
                 </div>
+
+                <!-- El modal con clases de centrado y responsive -->
+                <dialog id="modal-arkanto"
+                    class="backdrop:bg-navy-dark/80 backdrop:backdrop-blur-sm rounded-2xl shadow-2xl p-0 w-[95%] max-w-4xl fixed inset-0 m-auto overflow-hidden border-none">
+                    <div class="flex flex-col max-h-[90vh] bg-white">
+                        <!-- Header -->
+                        <div class="flex justify-between items-center p-5 border-b bg-white z-20">
+                            <h2 class="text-xl font-extrabold text-navy-dark uppercase">Zona Social Edificio Arkanto
+                            </h2>
+                            <button onclick="closeModal('modal-arkanto')"
+                                class="material-symbols-outlined text-slate-400 hover:text-red-500 transition-colors">close</button>
+                        </div>
+
+                        <div class="overflow-y-auto p-4 md:p-8">
+                            <!-- Contenedor del Carrusel -->
+                            <div class="relative group rounded-xl overflow-hidden mb-6 shadow-lg bg-slate-100">
+
+                                <!-- Tira de Imágenes -->
+                                <div id="slider-track" class="flex transition-transform duration-500 ease-out">
+                                    <img src="./assets/terraza1.jpeg" class="min-w-full h-64 md:h-112.5 object-cover"
+                                        alt="Vista 1">
+                                    <img src="./assets/terraza1.jpeg" class="min-w-full h-64 md:h-112.5 object-cover"
+                                        alt="Vista 2">
+                                    <img src="./assets/terraza2.jpeg" class="min-w-full h-64 md:h-112.5 object-cover"
+                                        alt="Vista 3">
+                                    <!-- Puedes agregar más <img> aquí y el contador se ajustará solo -->
+                                </div>
+
+                                <!-- Botones de Navegación (CORREGIDOS) -->
+                                <button onclick="prevSlide()"
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white w-10 h-10 rounded-full shadow-md transition-all flex items-center justify-center group/btn">
+                                    <span
+                                        class="material-symbols-outlined text-navy-dark group-hover/btn:scale-110 transition-transform">chevron_left</span>
+                                </button>
+
+                                <button onclick="nextSlide()"
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white w-10 h-10 rounded-full shadow-md transition-all flex items-center justify-center group/btn">
+                                    <span
+                                        class="material-symbols-outlined text-navy-dark group-hover/btn:scale-110 transition-transform">chevron_right</span>
+                                </button>
+
+                                <!-- Indicador de posición (DINÁMICO) -->
+                                <div id="slide-counter"
+                                    class="absolute bottom-4 right-4 bg-navy-dark/70 text-white text-[10px] px-3 py-1 rounded-full font-bold z-20">
+                                    <!-- Se llena vía JS -->
+                                </div>
+                            </div>
+
+                            <!-- Descripción -->
+                            <div class="max-w-2xl">
+                                <h3 class="text-lg font-bold text-navy-dark mb-2">Descripción del Proyecto</h3>
+                                <p class="text-slate-600 leading-relaxed mb-4 italic">
+                                    Diseño de vanguardia con acabados premium, optimizando cada metro cuadrado para el
+                                    disfrute de la comunidad.
+                                </p>
+                                <div class="flex flex-wrap gap-3">
+                                    <span
+                                        class="bg-primary-lime/20 text-navy-dark text-xs font-bold px-3 py-1 rounded-md border border-primary-lime">Ubicación:
+                                        Santander</span>
+                                    <span
+                                        class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Estado:
+                                        Finalizado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </dialog>
             </div>
             <div class="group flex flex-col gap-5">
                 <div
                     class="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-xl before-after-container bg-slate-200 border border-slate-200">
                     <div class="absolute inset-0 bg-cover bg-center before-image transition-opacity duration-700"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnL7Qi4RaVtOwUNDRq9Gbo8UCRnbQv1ntY_pTCIQQAkCLqwzNwGVQue0XjXYuXJul3zyYweVD-6ZX-8LA0KcDzz5MQFVfERhGnoTYwH3TGEdmWC5xIbfKmbPQDpv0Hom7NEbg_IgyVMdwdi3yjWXXn8ibbPNelz0UgGeDuC3p19Mh-cKzjvZdfS3gp63S3YIeZEAk_oNu2HheAwlYvXieiTTe_14JH1UUhJFWkAPJ8zr_jbO_-rxpeydgRPFncVsophsWtFtBxQl0c");'>
+                        style='background-image: url("./assets/terraza2.jpeg");'>
                         <div
                             class="absolute top-4 left-4 bg-navy-dark/90 text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                            Warehouse Before</div>
+                            Estado Original</div>
                     </div>
                     <div class="absolute inset-0 bg-cover bg-center after-image transition-opacity duration-700"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCa1yrb1KSveCp_74HDgYEIE9hkoJ_WPJm4ynaL2rMvdNeKxnowk2GVhv0fNBbrnpG2m0BasQ5sbP7nF_a9aYrcwxU1JMNxhmbNKFFlV8WsrK0YJ_KJskpeaSC7eR6FyG_2w7TVN1JJDx6fIw7w8yZ9DimpREsdj4k8o4S5D7JlOw4uY08ZT21WySAJvbu8Ro9-OpLrXZuLYwy1JTwQEaZXILso_Ds-pQ0Ai2PAIzssDXQQOQIRTNGcQ2YHgBY9dGoMEmVSqzB3Zay0");'>
+                        style='background-image: url("./assets/terraza1.jpeg");'>
                         <div
                             class="absolute top-4 left-4 bg-primary-lime text-navy-dark text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                            Modern Office Hub</div>
+                            Proyecto Finalizado</div>
                     </div>
                 </div>
+                <!-- Tu tarjeta de proyecto -->
                 <div class="px-2">
                     <div class="flex justify-between items-start mb-2">
                         <h3
                             class="text-xl font-extrabold text-navy-dark group-hover:text-primary-lime transition-colors">
-                            Industrial Loft</h3>
-                        <span
-                            class="text-[10px] font-black bg-navy-dark text-white px-3 py-1 rounded-full uppercase tracking-wider">Commercial</span>
+                            Zona Social Edificio Arkanto
+                        </h3>
+                        <!-- Cambiamos span por button y añadimos onclick -->
+                        <button onclick="openModal('modal-arkanto')"
+                            class="text-[10px] font-black bg-navy-dark text-white px-4 py-1 rounded-full uppercase tracking-wider text-center hover:bg-primary-lime transition-colors cursor-pointer">
+                            Ver Proyecto
+                        </button>
                     </div>
                     <div class="flex items-center gap-1.5 text-slate-500 text-sm font-medium">
                         <span class="material-symbols-outlined text-base text-primary-lime">location_on</span>
-                        <span>Sevilla, ES</span>
+                        <span>Santander, CO</span>
                     </div>
                 </div>
+
+                <!-- El modal con clases de centrado y responsive -->
+                <dialog id="modal-arkanto"
+                    class="backdrop:bg-navy-dark/80 backdrop:backdrop-blur-sm rounded-2xl shadow-2xl p-0 w-[95%] max-w-4xl fixed inset-0 m-auto overflow-hidden border-none">
+                    <div class="flex flex-col max-h-[90vh] bg-white">
+                        <!-- Header -->
+                        <div class="flex justify-between items-center p-5 border-b bg-white z-20">
+                            <h2 class="text-xl font-extrabold text-navy-dark uppercase">Zona Social Edificio Arkanto
+                            </h2>
+                            <button onclick="closeModal('modal-arkanto')"
+                                class="material-symbols-outlined text-slate-400 hover:text-red-500 transition-colors">close</button>
+                        </div>
+
+                        <div class="overflow-y-auto p-4 md:p-8">
+                            <!-- Contenedor del Carrusel -->
+                            <div class="relative group rounded-xl overflow-hidden mb-6 shadow-lg bg-slate-100">
+
+                                <!-- Tira de Imágenes -->
+                                <div id="slider-track" class="flex transition-transform duration-500 ease-out">
+                                    <img src="./assets/terraza1.jpeg" class="min-w-full h-64 md:h-112.5 object-cover"
+                                        alt="Vista 1">
+                                    <img src="./assets/terraza1.jpeg" class="min-w-full h-64 md:h-112.5 object-cover"
+                                        alt="Vista 2">
+                                    <img src="./assets/terraza2.jpeg" class="min-w-full h-64 md:h-112.5 object-cover"
+                                        alt="Vista 3">
+                                    <!-- Puedes agregar más <img> aquí y el contador se ajustará solo -->
+                                </div>
+
+                                <!-- Botones de Navegación (CORREGIDOS) -->
+                                <button onclick="prevSlide()"
+                                    class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white w-10 h-10 rounded-full shadow-md transition-all flex items-center justify-center group/btn">
+                                    <span
+                                        class="material-symbols-outlined text-navy-dark group-hover/btn:scale-110 transition-transform">chevron_left</span>
+                                </button>
+
+                                <button onclick="nextSlide()"
+                                    class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white w-10 h-10 rounded-full shadow-md transition-all flex items-center justify-center group/btn">
+                                    <span
+                                        class="material-symbols-outlined text-navy-dark group-hover/btn:scale-110 transition-transform">chevron_right</span>
+                                </button>
+
+                                <!-- Indicador de posición (DINÁMICO) -->
+                                <div id="slide-counter"
+                                    class="absolute bottom-4 right-4 bg-navy-dark/70 text-white text-[10px] px-3 py-1 rounded-full font-bold z-20">
+                                    <!-- Se llena vía JS -->
+                                </div>
+                            </div>
+
+                            <!-- Descripción -->
+                            <div class="max-w-2xl">
+                                <h3 class="text-lg font-bold text-navy-dark mb-2">Descripción del Proyecto</h3>
+                                <p class="text-slate-600 leading-relaxed mb-4 italic">
+                                    Diseño de vanguardia con acabados premium, optimizando cada metro cuadrado para el
+                                    disfrute de la comunidad.
+                                </p>
+                                <div class="flex flex-wrap gap-3">
+                                    <span
+                                        class="bg-primary-lime/20 text-navy-dark text-xs font-bold px-3 py-1 rounded-md border border-primary-lime">Ubicación:
+                                        Santander</span>
+                                    <span
+                                        class="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-md">Estado:
+                                        Finalizado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </dialog>
             </div>
-            <div class="group flex flex-col gap-5">
-                <div
-                    class="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-xl before-after-container bg-slate-200 border border-slate-200">
-                    <div class="absolute inset-0 bg-cover bg-center before-image transition-opacity duration-700"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBhk-Id81IuV0HEWDPrX9rXUA4DI_Bvj2f7w1TxVo5pWLsv9qypKib-1Y1e-z3U_rfENo4ge0Y_giRjHz31a8F-3aPSho62NGxbkEgZ54EfQcltiE2wrcBSHwGqcJ_-0BDH-eW-PQG7OFgKT80Ead1bwHBrz-dDVG5TUs01sK_uibeki2ENaCBdGzriVwD9sKoaJbylD8f0jyzNcpha0w1PEXC0XNDP--Vn5hCLuj4EZCwjCx40q2FqI6YU7hIau3ZFwpZfapTGzV8W");'>
-                        <div
-                            class="absolute top-4 left-4 bg-navy-dark/90 text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                            Original Facade</div>
+        </div>
+        <div class="relative w-full max-w-6xl mx-auto mt-16 px-4 group">
+            <h3 class="text-2xl font-black text-navy-dark mb-8 text-center uppercase tracking-tighter">Galería Expandida
+            </h3>
+
+            <div class="relative overflow-hidden rounded-3xl shadow-2xl bg-slate-100">
+                <!-- Tira de Imágenes -->
+                <div id="main-carousel-track" class="flex transition-transform duration-700 ease-in-out">
+                    <!-- Imagen 1 -->
+                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
+                        <img src="./assets/terraza1.jpeg" class="w-full h-full object-cover" alt="Proyecto 1">
                     </div>
-                    <div class="absolute inset-0 bg-cover bg-center after-image transition-opacity duration-700"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQnTJQN8WNUZvX1iQTzNMmvoKMSsmDYZHxUl_TlE6W3Ldg_JAHqiYeSg7CYPbtQbKShfxjDc2iwM-4-Gph8gETzu-Xxs6M7O2qYrXikQL5KX3PDReprgB5J9quB7-o1YY6XqwmUORcIzjuvl_sDfZZ5CD1c_X7J1FTZCibGHXiU88JdHYd3fzty5w_QdHqP6bievjyiLQaHi80snngzjGCszbH46SCYPYkS-RbzPrufFx5QRcOeE6aOxzWtBOwyZLvtyGJzE4QEix1");'>
-                        <div
-                            class="absolute top-4 left-4 bg-primary-lime text-navy-dark text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                            Coastal Restoration</div>
+                    <!-- Imagen 2 -->
+                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
+                        <img src="./assets/terraza2.jpeg" class="w-full h-full object-cover" alt="Proyecto 2">
                     </div>
-                </div>
-                <div class="px-2">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3
-                            class="text-xl font-extrabold text-navy-dark group-hover:text-primary-lime transition-colors">
-                            Costa Villa</h3>
-                        <span
-                            class="text-[10px] font-black bg-navy-dark text-white px-3 py-1 rounded-full uppercase tracking-wider">Residential</span>
+                    <!-- Imagen 3 -->
+                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
+                        <img src="./assets/terraza1.jpeg" class="w-full h-full object-cover" alt="Proyecto 3">
                     </div>
-                    <div class="flex items-center gap-1.5 text-slate-500 text-sm font-medium">
-                        <span class="material-symbols-outlined text-base text-primary-lime">location_on</span>
-                        <span>Malaga, ES</span>
+                    <!-- Imagen 4 -->
+                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
+                        <img src="./assets/terraza2.jpeg" class="w-full h-full object-cover" alt="Proyecto 4">
                     </div>
-                </div>
-            </div>
-            <div class="group flex flex-col gap-5">
-                <div
-                    class="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-xl before-after-container bg-slate-200 border border-slate-200">
-                    <div class="absolute inset-0 bg-cover bg-center before-image transition-opacity duration-700"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJmM3rf_D2uf7N8oq8O4odMUSWDvJPYC8lNgJG3eDuC-qIphb3BsACOiiPsM_pQquWlZvt1JVRoMhRNQkDMf6yBcA3lAAwccQhWZFaHqe2lJz9WOVbfhw9IFsXAUGSac0J9q0E9RY2q7Ipyydxpv5NQL_9S-BJ141goYtbs9dSMw3ofvaR77gDknpycPxzhGXOT2ynBB3vnz4mGXA9Rmd_XkLz5LQGquVSnOBYWKRhaj6Z3TZ10ltsrCJpzHQw-EQj5KcNEvZVf4EZ");'>
-                        <div
-                            class="absolute top-4 left-4 bg-navy-dark/90 text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                            Basement Initial</div>
+                    <!-- Imagen 5 -->
+                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
+                        <img src="./assets/terraza2.jpeg" class="w-full h-full object-cover" alt="Proyecto 4">
                     </div>
-                    <div class="absolute inset-0 bg-cover bg-center after-image transition-opacity duration-700"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSD6bVhLDlV3ITknVOwMoYnP-_gK2UXfagTVCIkslCn49i34G1L2Q-Z5Yj40csbKC5NeKZg_jFX5ujPqD2AhU5n-UirjV_ro2PSnUUqa1jC9uMUBa8rmmxrUsOTtd-gVMfN9u4kTE0xxcnVnjajtJKyxxW5CA_v5-ml3BGjjnJzWiUlHC9PniJ1LYaMHu3-JqW_lwo2bjWO9MHWXXvCzXyXyM_k_iz91mmISvAiK8C0geiuBqnsBFNIDqPluA6FcW908vtYglls2wP");'>
-                        <div
-                            class="absolute top-4 left-4 bg-primary-lime text-navy-dark text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                            Finished Space</div>
+                    <!-- Imagen 6 -->
+                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
+                        <img src="./assets/terraza2.jpeg" class="w-full h-full object-cover" alt="Proyecto 4">
+                    </div>
+                    <!-- Imagen 7 -->
+                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
+                        <img src="./assets/terraza2.jpeg" class="w-full h-full object-cover" alt="Proyecto 4">
+                    </div>
+                    <!-- Imagen 8 -->
+                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
+                        <img src="./assets/terraza2.jpeg" class="w-full h-full object-cover" alt="Proyecto 4">
                     </div>
                 </div>
-                <div class="px-2">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3
-                            class="text-xl font-extrabold text-navy-dark group-hover:text-primary-lime transition-colors">
-                            Urban Loft</h3>
-                        <span
-                            class="text-[10px] font-black bg-navy-dark text-white px-3 py-1 rounded-full uppercase tracking-wider">Residential</span>
-                    </div>
-                    <div class="flex items-center gap-1.5 text-slate-500 text-sm font-medium">
-                        <span class="material-symbols-outlined text-base text-primary-lime">location_on</span>
-                        <span>Valencia, ES</span>
-                    </div>
-                </div>
-            </div>
-            <div class="group flex flex-col gap-5">
-                <div
-                    class="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-xl before-after-container bg-slate-200 border border-slate-200">
-                    <div class="absolute inset-0 bg-cover bg-center before-image transition-opacity duration-700"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZk-ZMoI_wAoxT1PZet-nYmyi_zFeQ6-aul50OG6e3AICFHG-zEj3nToujkgEQntYPkZ7dGZXc73U_5nVLXvHtA6SpM14Q6QrLoz5A0GGXnF2RF2T03WjBXjGzH8VKFqZUwXmHgkx8hXqi2SkoTrg64fl0eaL8uvY5MyJhbD2nuddCaDeyVD_w8IyhY9Y5oRPp-mVmpPJYchLl7ZHjRUxJJ9oe6aRWAXOPICMcFoYSkhiA0MZvon4p-nx6ctNj60KvPoPFUfmabDhA");'>
-                        <div
-                            class="absolute top-4 left-4 bg-navy-dark/90 text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                            Unsafe Structure</div>
-                    </div>
-                    <div class="absolute inset-0 bg-cover bg-center after-image transition-opacity duration-700"
-                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_bxwkjidTCO1dlhYMS0Qa4M1nc8pMra9hzdAFptoEQdoL4o79YNc6C1D5IcGNJ-i8qKuJ-Us5cI8dVmoz2HmVrC7ByBJH-ww2VjeaeSyJmydbXVQUMfXpzih3yujNcrmwblOEeYeI7XYm6LPETjpRmb4Shi23my2k5jTWiBFGmicO6VxhV52B1uWplUE5KTOISPKbKu2CcahEyeUlX5xe08Ci28V33lH7rbdseW1lvaRuVREZ-Pvnd8Z_WcPTcTjzDgVH6VMnS0Sj");'>
-                        <div
-                            class="absolute top-4 left-4 bg-primary-lime text-navy-dark text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
-                            Restored Heritage</div>
-                    </div>
-                </div>
-                <div class="px-2">
-                    <div class="flex justify-between items-start mb-2">
-                        <h3
-                            class="text-xl font-extrabold text-navy-dark group-hover:text-primary-lime transition-colors">
-                            Heritage Landmark</h3>
-                        <span
-                            class="text-[10px] font-black bg-navy-dark text-white px-3 py-1 rounded-full uppercase tracking-wider">Structural</span>
-                    </div>
-                    <div class="flex items-center gap-1.5 text-slate-500 text-sm font-medium">
-                        <span class="material-symbols-outlined text-base text-primary-lime">location_on</span>
-                        <span>Bilbao, ES</span>
-                    </div>
-                </div>
+
+                <!-- Controles -->
+                <button onclick="moveMainCarousel(-1)"
+                    class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-primary-lime text-navy-dark w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <span class="material-symbols-outlined text-2xl!">chevron_left</span>
+                </button>
+                <button onclick="moveMainCarousel(1)"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-primary-lime text-navy-dark w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <span class="material-symbols-outlined text-2xl!">chevron_right</span>
+                </button>
+
+                <!-- Contenedor de Indicadores (Ahora se llena por JS) -->
+                <div id="dots-container" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2"></div>
             </div>
         </div>
         <div class="mt-32 rounded-[3rem] bg-navy-dark text-white p-8 py-16 md:p-24 relative overflow-hidden shadow-2xl">
@@ -375,28 +487,28 @@
                         <span class="text-primary-lime">para su proyecto.</span>
                     </h2>
                     <p class="text-slate-400 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed opacity-90">
-                        Evaluamos, planificamos y ejecutamos intervenciones en mantenimiento, impermeabilización y adecuaciones, asegurando calidad y cumplimiento en cada etapa.
+                        Evaluamos, planificamos y ejecutamos intervenciones en mantenimiento, impermeabilización y
+                        adecuaciones, asegurando calidad y cumplimiento en cada etapa.
                     </p>
                 </div>
 
                 <div class="flex flex-col sm:flex-row gap-4 w-full lg:w-auto shrink-0">
                     <button
                         class="bg-primary-lime hover:bg-white text-navy-dark font-black py-4 px-10 rounded-xl transition-all shadow-xl flex items-center justify-center gap-3 group">
-                        Contactar Expertos
+                        <a href="contacto.html">Contactar Expertos</a>
                         <span
                             class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
                     </button>
                     <button
                         class="border-2 border-slate-700 hover:border-primary-lime hover:text-primary-lime text-white font-bold py-4 px-10 rounded-xl transition-all flex items-center justify-center gap-2">
-                        Nuestros Servicios
+                        <a href="servicios.html">Nuestros Servicios</a>
                     </button>
                 </div>
 
             </div>
         </div>
     </main>
-    <footer
-        class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pt-20 pb-10 px-4 md:px-10">
+    <footer class="bg-white  border-t border-slate-200  pt-20 pb-10 px-4 md:px-10">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
             <!-- Brand -->
             <div class="flex flex-col gap-6">
@@ -407,7 +519,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <h2 class="text-primary dark:text-white text-sm font-black leading-none uppercase">
+                        <h2 class="text-primary  text-sm font-black leading-none uppercase">
                             Capitel
                         </h2>
                         <span class="text-accent-lime text-[10px] font-bold leading-none uppercase tracking-widest">
@@ -421,21 +533,11 @@
                     Construyendo el futuro sobre bases sólidas desde el 2008.
                 </p>
 
-                <div class="flex gap-4">
-                    <div
-                        class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-accent-lime transition-colors cursor-pointer">
-                        <span class="material-symbols-outlined">share</span>
-                    </div>
-                    <div
-                        class="size-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-accent-lime transition-colors cursor-pointer">
-                        <span class="material-symbols-outlined">mail</span>
-                    </div>
-                </div>
+                
             </div>
-
             <!-- Navegación -->
             <div class="flex flex-col gap-3">
-                <h4 class="text-sm font-black uppercase text-primary dark:text-white tracking-widest">
+                <h4 class="text-sm font-black uppercase text-primary  tracking-widest">
                     Navegación
                 </h4>
                 <ul class="flex flex-col gap-4 text-sm text-slate-500">
@@ -449,14 +551,14 @@
                         <a class="hover:text-accent-lime transition-colors" href="proyectos.html">Proyectos</a>
                     </li>
                     <li>
-                        <a class="hover:text-accent-lime transition-colors" href="nosotros.html">Proyectos</a>
+                        <a class="hover:text-accent-lime transition-colors" href="nosotros.html">Nosotros</a>
                     </li>
                 </ul>
             </div>
 
             <!-- Contacto (CON ICONOS, MISMA ESTRUCTURA) -->
             <div class="flex flex-col gap-3">
-                <h4 class="text-sm font-black uppercase text-primary dark:text-white tracking-widest">
+                <h4 class="text-sm font-black uppercase text-primary  tracking-widest">
                     Contacto
                 </h4>
                 <ul class="flex flex-col gap-4 text-sm text-slate-500">
@@ -485,7 +587,7 @@
 
             <!-- Ubicación -->
             <div class="flex flex-col gap-6">
-                <h4 class="text-sm font-black uppercase text-primary dark:text-white tracking-widest">
+                <h4 class="text-sm font-black uppercase text-primary  tracking-widest">
                     Ubicación
                 </h4>
                 <div class="rounded-lg overflow-hidden h-32 w-full bg-slate-200">
@@ -500,10 +602,27 @@
         </div>
 
         <div
-            class="max-w-7xl mx-auto mt-20 pt-10 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-400 font-medium uppercase tracking-[0.2em]">
+            class="max-w-7xl mx-auto mt-20 pt-10 border-t border-slate-200  text-center text-xs text-slate-400 font-medium uppercase tracking-[0.2em]">
             © 2024 CAPITEL SOLUCIONES. Todos los derechos reservados.
         </div>
     </footer>
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/573167197406?text=Hola,%20estoy%20interesado%20en%20sus%20servicios" target="_blank"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all duration-300 flex items-center justify-center group"
+        aria-label="Contactar por WhatsApp">
+
+        <!-- Icono (Puedes usar el de Material Symbols que ya tienes o un SVG) -->
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.63 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+
+        <!-- Tooltip opcional (se muestra al pasar el mouse) -->
+        <span
+            class="absolute right-full mr-3 bg-navy-corp text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            ¿Necesitas ayuda? Escríbenos
+        </span>
+    </a>
 </body>
 
 </html>
