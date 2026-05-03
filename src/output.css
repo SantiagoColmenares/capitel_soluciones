@@ -1978,6 +1978,47 @@
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
   }
+  .md\:text-xs {
+    @media (width >= 48rem) {
+      font-size: var(--text-xs);
+      line-height: var(--tw-leading, var(--text-xs--line-height));
+    }
+  }
+  .md\:text-\[1\.5em\] {
+    @media (width >= 48rem) {
+      font-size: 1.5em;
+    }
+  }
+  .md\:text-\[1em\] {
+    @media (width >= 48rem) {
+      font-size: 1em;
+    }
+  }
+  .md\:text-\[12px\] {
+    @media (width >= 48rem) {
+      font-size: 12px;
+    }
+  }
+  .md\:text-\[15px\] {
+    @media (width >= 48rem) {
+      font-size: 15px;
+    }
+  }
+  .md\:text-\[100px\] {
+    @media (width >= 48rem) {
+      font-size: 100px;
+    }
+  }
+  .md\:text-\[1\.em\] {
+    @media (width >= 48rem) {
+      color: 1.em;
+    }
+  }
+  .md\:text-\[1\] {
+    @media (width >= 48rem) {
+      color: 1;
+    }
+  }
   .lg\:static {
     @media (width >= 64rem) {
       position: static;
