@@ -170,3 +170,38 @@ function goToSlide(index) {
 document.addEventListener("DOMContentLoaded", () => {
     createDots();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  // 1. Definimos qué elementos queremos animar
+  // Agregué 'section', 'h2', y clases comunes de tarjetas
+  const targets = document.querySelectorAll('section, h2, .card, .proyecto-item, .before-after-container');
+
+  const observerOptions = {
+    threshold: 0.1, // Se activa cuando se ve el 10% del elemento
+    rootMargin: "0px 0px -40px 0px" // Un pequeño margen para que no se pegue al borde
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-visible');
+        // Una vez que aparece, dejamos de observarlo para ahorrar recursos
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  targets.forEach(target => {
+    // 2. FILTRO INTELIGENTE: 
+    // Si el H2 está dentro del Nav (Logo) o Footer, lo ignoramos
+    if (target.closest('nav') || target.closest('footer')) {
+      return; 
+    }
+
+    // 3. Aplicamos la clase inicial de tu input.css dinámicamente
+    target.classList.add('reveal-hidden');
+    
+    // 4. Empezamos a vigilar el elemento
+    observer.observe(target);
+  });
+});

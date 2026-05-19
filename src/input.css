@@ -42,6 +42,21 @@
   }
 }
 
+@layer components {
+  /* Estado inicial: Invisible y desplazado hacia abajo */
+  .reveal-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  /* Estado final: Visible y en su posición original */
+  .reveal-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
+
 /* 🧩 UTILIDADES */
 @layer utilities {
   .material-symbols-outlined {
