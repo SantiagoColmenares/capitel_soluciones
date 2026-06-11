@@ -1,207 +1,242 @@
-// --- LÓGICA DEL MENÚ MÓVIL ---
-const toggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("mobile-menu");
-const icon = document.getElementById("menu-icon");
-const links = menu.querySelectorAll("a, button");
-
-const openMenu = () => {
-    menu.classList.remove("max-h-0", "opacity-0", "py-0");
-    menu.classList.add("max-h-[500px]", "opacity-100", "py-6");
-    icon.textContent = "close";
-    toggle.dataset.open = "true";
-};
-
-const closeMenu = () => {
-    menu.classList.add("max-h-0", "opacity-0", "py-0");
-    menu.classList.remove("max-h-[500px]", "opacity-100", "py-6");
-    icon.textContent = "menu";
-    toggle.dataset.open = "false";
-};
-
-toggle.addEventListener("click", () => {
-    toggle.dataset.open === "true" ? closeMenu() : openMenu();
-});
-
-// Cerrar al hacer click en un link
-links.forEach(el => el.addEventListener("click", closeMenu));
-
-// Cerrar al pasar a desktop
-window.addEventListener("resize", () => {
-    if (window.innerWidth >= 1024) closeMenu();
-});
-
-
-// --- LÓGICA DE MODALES Y SLIDER (DINÁMICO) ---
-let currentIndex = 0;
-const track = document.getElementById('slider-track');
-const counter = document.getElementById('slide-counter');
-
 /**
- * Actualiza la posición del slider y el contador de forma dinámica
+ * CAPITEL SOLUCIONES - Script Maestro
+ * Incluye: Menú Móvil, Modales Dinámicos, Slider de Proyectos, 
+ * Carrusel Principal y Animaciones de Scroll.
  */
-function updateSlider() {
-    if (!track) return;
 
-    const slides = track.querySelectorAll('img');
-    const totalSlides = slides.length;
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // --- 1. LÓGICA DEL MENÚ MÓVIL ---
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    const icon = document.getElementById("menu-icon");
+    const links = menu.querySelectorAll("a, button");
 
-    // Asegurar que el índice no se salga de los límites
-    if (currentIndex >= totalSlides) currentIndex = 0;
-    if (currentIndex < 0) currentIndex = totalSlides - 1;
+    const openMenu = () => {
+        menu.classList.remove("max-h-0", "opacity-0", "py-0");
+        menu.classList.add("max-h-[500px]", "opacity-100", "py-6");
+        icon.textContent = "close";
+        toggle.dataset.open = "true";
+    };
 
-    // Mover la tira de imágenes
-    const percentage = currentIndex * -100;
-    track.style.transform = `translateX(${percentage}%)`;
+    const closeMenu = () => {
+        menu.classList.add("max-h-0", "opacity-0", "py-0");
+        menu.classList.remove("max-h-[500px]", "opacity-100", "py-6");
+        icon.textContent = "menu";
+        toggle.dataset.open = "false";
+    };
 
-    // Actualizar el número de página dinámicamente
-    if (counter) {
-        counter.innerText = `${currentIndex + 1} / ${totalSlides}`;
+    if (toggle) {
+        toggle.addEventListener("click", () => {
+            toggle.dataset.open === "true" ? closeMenu() : openMenu();
+        });
     }
-}
 
-function nextSlide() {
-    currentIndex++;
-    updateSlider();
-}
+    links.forEach(el => el.addEventListener("click", closeMenu));
 
-function prevSlide() {
-    currentIndex--;
-    updateSlider();
-}
-
-/**
- * Abre el modal y reinicia el slider
- */
-function openModal(id) {
-    const dialog = document.getElementById(id);
-    if (dialog) {
-        dialog.showModal();
-        document.body.style.overflow = 'hidden';
-        // Reiniciar el slider al abrir para que siempre empiece en la foto 1
-        currentIndex = 0;
-        updateSlider();
-    }
-}
-
-/**
- * Cierra el modal y restaura el scroll
- */
-function closeModal(id) {
-    const dialog = document.getElementById(id);
-    if (dialog) {
-        dialog.close();
-        document.body.style.overflow = 'auto';
-    }
-}
-
-// Cerrar al hacer clic fuera del contenido (backdrop) para todos los dialogs
-const dialogs = document.querySelectorAll('dialog');
-dialogs.forEach(dialog => {
-    dialog.addEventListener('click', (e) => {
-        if (e.target === dialog) closeModal(dialog.id);
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 1024) closeMenu();
     });
-});
-
-// Soporte para flechas del teclado cuando el modal está abierto
-document.addEventListener('keydown', (e) => {
-    const modal = document.getElementById('modal-arkanto');
-    if (modal && modal.open) {
-        if (e.key === "ArrowRight") nextSlide();
-        if (e.key === "ArrowLeft") prevSlide();
-    }
-});
 
 
-// --- CARRUSEL PRINCIPAL DE LA WEB (CON DOTS) ---
-let currentMainSlide = 0;
-const mainTrack = document.getElementById('main-carousel-track');
-const dotsContainer = document.getElementById('dots-container');
+    // --- 2. LÓGICA DE MODALES Y SLIDER (DINÁMICO) ---
+    let currentIndex = 0;
 
-function createDots() {
-    if (!dotsContainer || !mainTrack) return;
-    
-    const slides = mainTrack.querySelectorAll('.carousel-item');
-    const totalSlides = slides.length;
-    
-    dotsContainer.innerHTML = ""; // Limpiar antes de generar
+    // Función interna para obtener elementos del modal activo
+    const getActiveSliderElements = () => {
+        const activeModal = document.querySelector('dialog[open]');
+        if (!activeModal) return null;
+        return {
+            track: activeModal.querySelector('.slider-track'),
+            counter: activeModal.querySelector('.slide-counter')
+        };
+    };
 
-    for (let i = 0; i < totalSlides; i++) {
-        const dot = document.createElement('div');
-        dot.className = `main-dot h-3 rounded-full transition-all cursor-pointer ${i === 0 ? 'bg-primary-lime w-8' : 'bg-white/50 w-3'}`;
-        dot.onclick = () => goToSlide(i);
-        dotsContainer.appendChild(dot);
-    }
-}
+    window.updateSlider = function() {
+        const elements = getActiveSliderElements();
+        if (!elements || !elements.track) return;
 
-function updateMainCarousel() {
-    if (!mainTrack) return;
-    
-    const slides = mainTrack.querySelectorAll('.carousel-item');
-    const totalSlides = slides.length;
+        const slides = elements.track.querySelectorAll('img');
+        const totalSlides = slides.length;
 
-    if (currentMainSlide >= totalSlides) currentMainSlide = 0;
-    if (currentMainSlide < 0) currentMainSlide = totalSlides - 1;
+        if (currentIndex >= totalSlides) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = totalSlides - 1;
 
-    mainTrack.style.transform = `translateX(-${currentMainSlide * 100}%)`;
+        const percentage = currentIndex * -100;
+        elements.track.style.transform = `translateX(${percentage}%)`;
 
-    const allDots = document.querySelectorAll('.main-dot');
-    allDots.forEach((dot, index) => {
-        if (index === currentMainSlide) {
-            dot.className = 'main-dot h-3 rounded-full transition-all cursor-pointer bg-primary-lime w-8';
-        } else {
-            dot.className = 'main-dot h-3 rounded-full transition-all cursor-pointer bg-white/50 w-3';
+        if (elements.counter) {
+            elements.counter.innerText = `${currentIndex + 1} / ${totalSlides}`;
+        }
+    };
+
+    window.nextSlide = function() {
+        currentIndex++;
+        updateSlider();
+    };
+
+    window.prevSlide = function() {
+        currentIndex--;
+        updateSlider();
+    };
+
+    window.openModal = function(id) {
+        const dialog = document.getElementById(id);
+        if (dialog) {
+            currentIndex = 0; 
+            dialog.showModal();
+            document.body.style.overflow = 'hidden';
+            updateSlider();
+        }
+    };
+
+    window.closeModal = function(id) {
+        const dialog = document.getElementById(id);
+        if (dialog) {
+            dialog.close();
+            document.body.style.overflow = 'auto';
+        }
+    };
+
+    // Cerrar al hacer clic fuera (backdrop)
+    document.querySelectorAll('dialog').forEach(dialog => {
+        dialog.addEventListener('click', (e) => {
+            if (e.target === dialog) closeModal(dialog.id);
+        });
+    });
+
+    // Control por teclado
+    document.addEventListener('keydown', (e) => {
+        const activeModal = document.querySelector('dialog[open]');
+        if (activeModal) {
+            if (e.key === "ArrowRight") nextSlide();
+            if (e.key === "ArrowLeft") prevSlide();
         }
     });
-}
 
-function moveMainCarousel(direction) {
-    const slides = mainTrack.querySelectorAll('.carousel-item');
-    const totalSlides = slides.length;
-    currentMainSlide = (currentMainSlide + direction + totalSlides) % totalSlides;
-    updateMainCarousel();
-}
 
-function goToSlide(index) {
-    currentMainSlide = index;
-    updateMainCarousel();
-}
+    // --- 3. CARRUSEL PRINCIPAL (HERO) ---
+    let currentMainSlide = 0;
+    const mainTrack = document.getElementById('main-carousel-track');
+    const dotsContainer = document.getElementById('dots-container');
 
-// Inicialización del Carrusel Principal
-document.addEventListener("DOMContentLoaded", () => {
-    createDots();
-});
+    function createDots() {
+        if (!dotsContainer || !mainTrack) return;
+        const slides = mainTrack.querySelectorAll('.carousel-item');
+        dotsContainer.innerHTML = ""; 
 
-document.addEventListener("DOMContentLoaded", () => {
-  // 1. Definimos qué elementos queremos animar
-  // Agregué 'section', 'h2', y clases comunes de tarjetas
-  const targets = document.querySelectorAll('section, h2, .card, .proyecto-item, .before-after-container');
-
-  const observerOptions = {
-    threshold: 0.1, // Se activa cuando se ve el 10% del elemento
-    rootMargin: "0px 0px -40px 0px" // Un pequeño margen para que no se pegue al borde
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('reveal-visible');
-        // Una vez que aparece, dejamos de observarlo para ahorrar recursos
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  targets.forEach(target => {
-    // 2. FILTRO INTELIGENTE: 
-    // Si el H2 está dentro del Nav (Logo) o Footer, lo ignoramos
-    if (target.closest('nav') || target.closest('footer')) {
-      return; 
+        slides.forEach((_, i) => {
+            const dot = document.createElement('div');
+            dot.className = `main-dot h-3 rounded-full transition-all cursor-pointer ${i === 0 ? 'bg-primary-lime w-8' : 'bg-white/50 w-3'}`;
+            dot.onclick = () => goToSlide(i);
+            dotsContainer.appendChild(dot);
+        });
     }
 
-    // 3. Aplicamos la clase inicial de tu input.css dinámicamente
-    target.classList.add('reveal-hidden');
+    window.updateMainCarousel = function() {
+        if (!mainTrack) return;
+        const slides = mainTrack.querySelectorAll('.carousel-item');
+        const totalSlides = slides.length;
+
+        currentMainSlide = (currentMainSlide + totalSlides) % totalSlides;
+        mainTrack.style.transform = `translateX(-${currentMainSlide * 100}%)`;
+
+        const allDots = document.querySelectorAll('.main-dot');
+        allDots.forEach((dot, index) => {
+            dot.className = index === currentMainSlide 
+                ? 'main-dot h-3 rounded-full transition-all cursor-pointer bg-primary-lime w-8' 
+                : 'main-dot h-3 rounded-full transition-all cursor-pointer bg-white/50 w-3';
+        });
+    };
+
+    window.moveMainCarousel = function(direction) {
+        currentMainSlide += direction;
+        updateMainCarousel();
+    };
+
+    window.goToSlide = function(index) {
+        currentMainSlide = index;
+        updateMainCarousel();
+    };
+
+    // Autoplay opcional para el carrusel principal (5 segundos)
+    setInterval(() => moveMainCarousel(1), 5000);
+
+    createDots();
+
+
+    // --- 4. ANIMACIONES DE REVELADO (SCROLL) ---
+    const targets = document.querySelectorAll('section, h2, .card, .proyecto-item, .before-after-container');
     
-    // 4. Empezamos a vigilar el elemento
-    observer.observe(target);
-  });
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    targets.forEach(target => {
+        if (target.closest('nav') || target.closest('footer')) return;
+        target.classList.add('reveal-hidden');
+        observer.observe(target);
+    });
+
+});
+
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    // 1. Detener el envío automático para validar primero
+    event.preventDefault();
+
+    // Obtener los campos
+    const nombreInput = this.querySelector('input[name="nombre"]');
+    const emailInput = this.querySelector('input[name="email"]');
+    const asuntoInput = this.querySelector('input[name="subject"]');
+    const mensajeInput = this.querySelector('textarea[name="mensaje"]');
+
+    // 2. Eliminar espacios en blanco innecesarios al inicio y final
+    const nombre = nombreInput.value.trim();
+    const email = emailInput.value.trim();
+    const asunto = asuntoInput.value.trim();
+    const mensaje = mensajeInput.value.trim();
+
+    // 3. Validación de campos vacíos
+    if (!nombre || !email || !asunto || !mensaje) {
+        alert("Por favor, rellene todos los campos obligatorios.");
+        return;
+    }
+
+    // 4. Validación estricta de estructura de Email (Expresión Regular)
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email)) {
+        alert("Por favor, introduce una dirección de correo electrónico válida.");
+        emailInput.focus();
+        return;
+    }
+
+    // 5. PROTECCIÓN CONTRA MALWARE / INYECCIÓN DE CÓDIGO (Sanitización)
+    // Esta función convierte caracteres peligrosos como <script> en texto inofensivo
+    function limpiarTexto(texto) {
+        return texto
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    // Aplicar la limpieza antes de enviar
+    nombreInput.value = limpiarTexto(nombre);
+    asuntoInput.value = limpiarTexto(asunto);
+    mensajeInput.value = limpiarTexto(mensaje);
+
+    // 6. Si todo está correcto y limpio, enviar el formulario a Web3Forms
+    this.submit();
 });

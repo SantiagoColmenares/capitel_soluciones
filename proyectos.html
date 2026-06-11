@@ -119,7 +119,7 @@
                 <div
                     class="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-xl before-after-container bg-slate-200 border border-slate-200">
                     <div class="absolute inset-0 bg-cover bg-center before-image transition-opacity duration-700"
-                        style='background-image: url("./assets/impermeabilizacion-cubiertas-manto-asfaltico.webp");'>
+                        style='background-image: url("./assets/montaje-estructura-refuerzo-cubierta.webp");'>
                         <div
                             class="absolute top-4 left-4 bg-navy-dark/90 text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
                             Estado Original</div>
@@ -167,13 +167,16 @@
                             <div class="relative group rounded-xl overflow-hidden mb-6 shadow-lg bg-slate-100">
 
                                 <!-- Tira de Imágenes -->
-                                <div id="slider-track" class="flex transition-transform duration-500 ease-out">
-                                    <img src="./assets/impermeabilizacion-terrazas-acabados-ceramicos.webp" loading="lazy" class="min-w-full h-64 md:h-112.5 object-cover"
+                                <div class="slider-track flex transition-transform duration-500 ease-out">
+                                    <img src="./assets/impermeabilizacion-terrazas-acabados-ceramicos.webp"
+                                        loading="lazy" class="min-w-full h-64 md:h-112.5 object-cover"
                                         alt="Proyecto de impermeabilización y piso cerámico para terraza residencial">
-                                    <img src="./assets/impermeabilizacion-terrazas-acabados-ceramicos.webp" loading="lazy" class="min-w-full h-64 md:h-112.5 object-cover"
-                                        alt="Vista 2">
-                                    <img src="./assets/impermeabilizacion-terrazas-acabados-ceramicos.webp" loading="lazy" class="min-w-full h-64 md:h-112.5 object-cover"
-                                        alt="Vista 3">
+                                    <img src="./assets/refuerzo-cubierta-terraza-edificio-arkanto.webp" loading="lazy"
+                                        class="min-w-full h-64 md:h-112.5 object-cover"
+                                        alt="Refuerzo estructural de cubierta para terraza en el Edificio Arkanto, Bucaramanga">
+                                    <img src="./assets/refuerzo-estructura-metalica-terraza.webp" loading="lazy"
+                                        class="min-w-full h-64 md:h-112.5 object-cover"
+                                        alt="Refuerzo metalico en estructura de terraza">
                                     <!-- Puedes agregar más <img> aquí y el contador se ajustará solo -->
                                 </div>
 
@@ -191,8 +194,8 @@
                                 </button>
 
                                 <!-- Indicador de posición (DINÁMICO) -->
-                                <div id="slide-counter"
-                                    class="absolute bottom-4 right-4 bg-navy-dark/70 text-white text-[10px] px-3 py-1 rounded-full font-bold z-20">
+                                <div
+                                    class="slide-counter absolute bottom-4 right-4 bg-navy-dark/70 text-white text-[10px] px-3 py-1 rounded-full font-bold z-20">
                                     <!-- Se llena vía JS -->
                                 </div>
                             </div>
@@ -201,8 +204,7 @@
                             <div class="max-w-2xl">
                                 <h3 class="text-lg font-bold text-navy-dark mb-2">Descripción del Proyecto</h3>
                                 <p class="text-slate-600 leading-relaxed mb-4 italic">
-                                    Diseño de vanguardia con acabados premium, optimizando cada metro cuadrado para el
-                                    disfrute de la comunidad.
+                                    Construcción de dos cubiertas metálicas con teja termoacústica e instalación de elementos arquitectónicos en WPC, conforme al diseño establecido. El proyecto incluyó la adecuación de zonas sociales y recreativas, como áreas húmedas, salón social y zona de juegos, destacándose la intervención del jacuzzi, la instalación de enchape cerámico de alto tráfico, grama sintética y la ejecución de acabados arquitectónicos. Las obras permitieron optimizar la funcionalidad, durabilidad y estética de los espacios intervenidos.
                                 </p>
                                 <div class="flex flex-wrap gap-3">
                                     <span
@@ -221,13 +223,13 @@
                 <div
                     class="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-xl before-after-container bg-slate-200 border border-slate-200">
                     <div class="absolute inset-0 bg-cover bg-center before-image transition-opacity duration-700"
-                        style='background-image: url("./assets/adecuacion-fachadas-capitel-soluciones.webp");'>
+                        style='background-image: url("./assets/remodelacion-exteriores-edificios-bucaramanga.webp");'>
                         <div
                             class="absolute top-4 left-4 bg-navy-dark/90 text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
                             Estado Original</div>
                     </div>
                     <div class="absolute inset-0 bg-cover bg-center after-image transition-opacity duration-700"
-                        style='background-image: url("./assets/remodelacion-exteriores-edificios-bucaramanga.webp");'>
+                        style='background-image: url("./assets/adecuacion-fachadas-capitel-soluciones.webp");'>
                         <div
                             class="absolute top-4 left-4 bg-primary-lime text-navy-dark text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
                             Proyecto Finalizado</div>
@@ -241,7 +243,7 @@
                             Fachada Edificio Miquellet
                         </h3>
                         <!-- Cambiamos span por button y añadimos onclick -->
-                        <button onclick="openModal('modal-arkanto')"
+                        <button onclick="openModal('modal-miquellet')"
                             class="text-[10px] font-black bg-navy-dark text-white px-4 py-1 rounded-full uppercase tracking-wider text-center hover:bg-primary-lime transition-colors cursor-pointer">
                             Ver Proyecto
                         </button>
@@ -253,14 +255,15 @@
                 </div>
 
                 <!-- El modal con clases de centrado y responsive -->
-                <dialog id="modal-arkanto"
+                <!-- Miquellet -->
+                <dialog id="modal-miquellet"
                     class="backdrop:bg-navy-dark/80 backdrop:backdrop-blur-sm rounded-2xl shadow-2xl p-0 w-[95%] max-w-4xl fixed inset-0 m-auto overflow-hidden border-none">
                     <div class="flex flex-col max-h-[90vh] bg-white">
                         <!-- Header -->
                         <div class="flex justify-between items-center p-5 border-b bg-white z-20">
-                            <h2 class="text-xl font-extrabold text-navy-dark uppercase">Zona Social Edificio Arkanto
+                            <h2 class="text-xl font-extrabold text-navy-dark uppercase">Fachada Edificio Miquellet
                             </h2>
-                            <button onclick="closeModal('modal-arkanto')"
+                            <button onclick="closeModal('modal-miquellet')"
                                 class="material-symbols-outlined text-slate-400 hover:text-red-500 transition-colors">close</button>
                         </div>
 
@@ -269,14 +272,32 @@
                             <div class="relative group rounded-xl overflow-hidden mb-6 shadow-lg bg-slate-100">
 
                                 <!-- Tira de Imágenes -->
-                                <div id="slider-track" class="flex transition-transform duration-500 ease-out">
-                                    <img src="./assets/obras-civiles-fachadas-esquineras-bucaramanga.webp" loading="lazy" class="min-w-full h-64 md:h-112.5 object-cover"
-                                        alt="Ejecución de obra civil en fachada esquinera de alto nivel en Bucaramanga">
-                                    <img src="./assets/terraza1.webp" class="min-w-full h-64 md:h-112.5 object-cover"
-                                        alt="Vista 2">
-                                    <img src="./assets/terraza2.webp" class="min-w-full h-64 md:h-112.5 object-cover"
-                                        alt="Vista 3">
-                                    <!-- Puedes agregar más <img> aquí y el contador se ajustará solo -->
+                                <div class="relative w-full h-87.5 md:h-137.5 overflow-hidden rounded-3xl bg-slate-800 shadow-2xl">
+                                    <div class="slider-track flex h-full transition-transform duration-500 ease-out">
+                                        <div class="w-full h-full shrink-0 flex items-center justify-center p-4">
+                                            <img src="./assets/obras-civiles-fachadas-esquineras-bucaramanga.webp"
+                                                class="max-w-full max-h-full w-auto h-auto object-contain shadow-md"
+                                                alt="Fachada 1">
+                                        </div>
+                                        <div class="w-full h-full shrink-0 flex items-center justify-center p-4">
+                                            <img src="./assets/restauracion-estetica-fachadas-bucaramanga.webp"
+                                                class="max-w-full max-h-full w-auto h-auto object-contain shadow-md"
+                                                alt="Fachada 3">
+                                        </div>
+                                        <div class="w-full h-full shrink-0 flex items-center justify-center p-4">
+                                            <img src="./assets/rehabilitacion-fachada-residencial-santander.webp"
+                                                class="max-w-full max-h-full w-auto h-auto object-contain shadow-md"
+                                                alt="Fachada 4">
+                                        </div>
+                                    </div>
+                                    <button onclick="prevSlide()"
+                                        class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 p-2 rounded-full shadow-lg">
+                                        <span class="material-symbols-outlined text-navy-dark">chevron_left</span>
+                                    </button>
+                                    <button onclick="nextSlide()"
+                                        class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 p-2 rounded-full shadow-lg">
+                                        <span class="material-symbols-outlined text-navy-dark">chevron_right</span>
+                                    </button>
                                 </div>
 
                                 <!-- Botones de Navegación (CORREGIDOS) -->
@@ -293,8 +314,8 @@
                                 </button>
 
                                 <!-- Indicador de posición (DINÁMICO) -->
-                                <div id="slide-counter"
-                                    class="absolute bottom-4 right-4 bg-navy-dark/70 text-white text-[10px] px-3 py-1 rounded-full font-bold z-20">
+                                <div
+                                    class="slide-counter absolute bottom-4 right-4 bg-navy-dark/70 text-white text-[10px] px-3 py-1 rounded-full font-bold z-20">
                                     <!-- Se llena vía JS -->
                                 </div>
                             </div>
@@ -303,8 +324,7 @@
                             <div class="max-w-2xl">
                                 <h3 class="text-lg font-bold text-navy-dark mb-2">Descripción del Proyecto</h3>
                                 <p class="text-slate-600 leading-relaxed mb-4 italic">
-                                    Diseño de vanguardia con acabados premium, optimizando cada metro cuadrado para el
-                                    disfrute de la comunidad.
+                                    Se ejecutó la restauración integral de la fachada, contemplando un estudio cromático para la definición y actualización de la paleta de colores acorde con la identidad arquitectónica de la edificación. Las actividades incluyeron la reparación y preparación de superficies mediante resanes, tratamiento de fisuras e imperfecciones, restauración y protección de elementos metálicos, así como la aplicación de sistemas de pintura de alta calidad para exteriores. La intervención permitió recuperar la estética, mejorar la protección de los materiales expuestos a la intemperie y prolongar la vida útil de la envolvente arquitectónica.
                                 </p>
                                 <div class="flex flex-wrap gap-3">
                                     <span
@@ -323,13 +343,13 @@
                 <div
                     class="relative w-full aspect-4/3 rounded-2xl overflow-hidden shadow-xl before-after-container bg-slate-200 border border-slate-200">
                     <div class="absolute inset-0 bg-cover bg-center before-image transition-opacity duration-700"
-                        style='background-image: url("./assets/terraza2.webp");'>
+                        style='background-image: url("./assets/detalles-tecnicos-soldadura-mezanine.webp");'>
                         <div
                             class="absolute top-4 left-4 bg-navy-dark/90 text-white text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
                             Estado Original</div>
                     </div>
                     <div class="absolute inset-0 bg-cover bg-center after-image transition-opacity duration-700"
-                        style='background-image: url("./assets/terraza1.webp");'>
+                        style='background-image: url("./assets/diseno-arquitectonico-y-planeacion-de-obra.webp");'>
                         <div
                             class="absolute top-4 left-4 bg-primary-lime text-navy-dark text-[10px] font-black px-3 py-1.5 rounded-full uppercase tracking-widest shadow-lg">
                             Proyecto Finalizado</div>
@@ -340,10 +360,10 @@
                     <div class="flex justify-between items-start mb-2">
                         <h3
                             class="text-xl font-extrabold text-navy-dark group-hover:text-primary-lime transition-colors">
-                            Zona Social Edificio Arkanto
+                            Bodega Central de Abastos
                         </h3>
                         <!-- Cambiamos span por button y añadimos onclick -->
-                        <button onclick="openModal('modal-arkanto')"
+                        <button onclick="openModal('modal-abastos')"
                             class="text-[10px] font-black bg-navy-dark text-white px-4 py-1 rounded-full uppercase tracking-wider text-center hover:bg-primary-lime transition-colors cursor-pointer">
                             Ver Proyecto
                         </button>
@@ -355,14 +375,14 @@
                 </div>
 
                 <!-- El modal con clases de centrado y responsive -->
-                <dialog id="modal-arkanto"
+                <dialog id="modal-abastos"
                     class="backdrop:bg-navy-dark/80 backdrop:backdrop-blur-sm rounded-2xl shadow-2xl p-0 w-[95%] max-w-4xl fixed inset-0 m-auto overflow-hidden border-none">
                     <div class="flex flex-col max-h-[90vh] bg-white">
                         <!-- Header -->
                         <div class="flex justify-between items-center p-5 border-b bg-white z-20">
-                            <h2 class="text-xl font-extrabold text-navy-dark uppercase">Zona Social Edificio Arkanto
+                            <h2 class="text-xl font-extrabold text-navy-dark uppercase">Bodega Central de Abastos
                             </h2>
-                            <button onclick="closeModal('modal-arkanto')"
+                            <button onclick="closeModal('modal-abastos')"
                                 class="material-symbols-outlined text-slate-400 hover:text-red-500 transition-colors">close</button>
                         </div>
 
@@ -371,13 +391,16 @@
                             <div class="relative group rounded-xl overflow-hidden mb-6 shadow-lg bg-slate-100">
 
                                 <!-- Tira de Imágenes -->
-                                <div id="slider-track" class="flex transition-transform duration-500 ease-out">
-                                    <img src="./assets/terraza1.webp" class="min-w-full h-64 md:h-112.5 object-cover"
-                                        alt="Vista 1">
-                                    <img src="./assets/terraza1.webp" class="min-w-full h-64 md:h-112.5 object-cover"
-                                        alt="Vista 2">
-                                    <img src="./assets/terraza2.webp" class="min-w-full h-64 md:h-112.5 object-cover"
-                                        alt="Vista 3">
+                                <div class="slider-track flex transition-transform duration-500 ease-out">
+                                    <img src="./assets/montaje-mezanine-acero-santander.webp" loading="lazy"
+                                        class="min-w-full h-64 md:h-112.5 object-cover"
+                                        alt="Proceso de montaje técnico de estructura de acero para mezanine por Capitel Soluciones">
+                                    <img src="./assets/construccion-mezanine-central-abastos-bucaramanga.webp"
+                                        loading="lazy" class="min-w-full h-64 md:h-112.5 object-cover"
+                                        alt="Construcción de mezanine en estructura metálica para bodega en la Central de Abastos de Bucaramanga">
+                                    <img src="./assets/obra-civil-mezanine-capitel-soluciones.webp" loading="lazy"
+                                        class="min-w-full h-64 md:h-112.5 object-cover"
+                                        alt="Resultado final de obra civil: mezanine de acero en la Central de Abastos de Bucaramanga">
                                     <!-- Puedes agregar más <img> aquí y el contador se ajustará solo -->
                                 </div>
 
@@ -395,8 +418,8 @@
                                 </button>
 
                                 <!-- Indicador de posición (DINÁMICO) -->
-                                <div id="slide-counter"
-                                    class="absolute bottom-4 right-4 bg-navy-dark/70 text-white text-[10px] px-3 py-1 rounded-full font-bold z-20">
+                                <div
+                                    class="slide-counter absolute bottom-4 right-4 bg-navy-dark/70 text-white text-[10px] px-3 py-1 rounded-full font-bold z-20">
                                     <!-- Se llena vía JS -->
                                 </div>
                             </div>
@@ -405,8 +428,7 @@
                             <div class="max-w-2xl">
                                 <h3 class="text-lg font-bold text-navy-dark mb-2">Descripción del Proyecto</h3>
                                 <p class="text-slate-600 leading-relaxed mb-4 italic">
-                                    Diseño de vanguardia con acabados premium, optimizando cada metro cuadrado para el
-                                    disfrute de la comunidad.
+                                    Adecuación integral de bodega comercial en Centroabastos, incluyendo la construcción de un mezzanine destinado a áreas administrativas y de oficinas, optimizando el aprovechamiento del espacio disponible. El proyecto contempló además la adecuación y acondicionamiento de las áreas operativas para la posterior instalación de un sistema de cuarto frío, mediante la ejecución de obras civiles, adecuaciones arquitectónicas y ajustes de infraestructura requeridos para su correcta implementación. La intervención permitió modernizar la bodega, mejorar su capacidad operativa y adaptarla a las necesidades logísticas y de almacenamiento especializado del cliente.
                                 </p>
                                 <div class="flex flex-wrap gap-3">
                                     <span
@@ -426,55 +448,64 @@
             <h3 class="text-2xl font-black text-navy-dark mb-8 text-center uppercase tracking-tighter">Galería Expandida
             </h3>
 
-            <div class="relative overflow-hidden rounded-3xl shadow-2xl bg-slate-100">
-                <!-- Tira de Imágenes -->
-                <div id="main-carousel-track" class="flex transition-transform duration-700 ease-in-out">
-                    <!-- Imagen 1 -->
-                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
-                        <img src="./assets/terraza1.webp" class="w-full h-full object-cover" alt="Proyecto 1">
+            <div class="relative w-full max-w-6xl mx-auto mt-16 px-4 group">
+                <h3 class="text-2xl font-black text-navy-dark mb-8 text-center uppercase tracking-tighter">
+                    Galería Expandida
+                </h3>
+
+                <div class="relative overflow-hidden rounded-3xl shadow-2xl bg-slate-800 aspect-video md:aspect-16/8">
+
+                    <div id="main-carousel-track"
+                        class="flex flex-row flex-nowrap h-full transition-transform duration-700 ease-in-out">
+
+                        <div class="carousel-item w-full h-full shrink-0 flex items-center justify-center">
+                            <img src="./assets/mantenimiento-correctivo-techos-y-bajantes.webp"
+                                class="max-w-full max-h-full object-contain" alt="Proyecto">
+                        </div>
+
+                        <div class="carousel-item w-full h-full shrink-0 flex items-center justify-center">
+                            <img src="./assets/mantenimiento-fachadas-edificios-bucaramanga.webp"
+                                class="max-w-full max-h-full object-contain" alt="Proyecto">
+                        </div>
+                        <div class="carousel-item w-full h-full shrink-0 flex items-center justify-center">
+                            <img src="./assets/ingenieria-estructural-mezanines-bucaramanga.webp"
+                                class="max-w-full max-h-full object-contain" alt="Proyecto">
+                        </div>
+                        <div class="carousel-item w-full h-full shrink-0 flex items-center justify-center">
+                            <img src="./assets/remodelacion-exteriores-edificios-bucaramanga.webp"
+                                class="max-w-full max-h-full object-contain" alt="Proyecto">
+                        </div>
+                        <div class="carousel-item w-full h-full shrink-0 flex items-center justify-center">
+                            <img src="./assets/adecuacion-fachadas-capitel-soluciones.webp"
+                                class="max-w-full max-h-full object-contain" alt="Proyecto">
+                        </div>
+                        <div class="carousel-item w-full h-full shrink-0 flex items-center justify-center">
+                            <img src="./assets/montaje-mezanine-acero-santander.webp"
+                                class="max-w-full max-h-full object-contain" alt="Proyecto">
+                        </div>
+                        <div class="carousel-item w-full h-full shrink-0 flex items-center justify-center">
+                            <img src="./assets/acabados-exteriores-edificios-oficinas-santander.webp"
+                                class="max-w-full max-h-full object-contain" alt="Proyecto">
+                        </div>
+                        <div class="carousel-item w-full h-full shrink-0 flex items-center justify-center">
+                            <img src="./assets/vistas-proyectos-construccion-bucaramanga.webp"
+                                class="max-w-full max-h-full object-contain" alt="Proyecto">
+                        </div>
+
                     </div>
-                    <!-- Imagen 2 -->
-                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
-                        <img src="./assets/terraza2.webp" class="w-full h-full object-cover" alt="Proyecto 2">
-                    </div>
-                    <!-- Imagen 3 -->
-                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
-                        <img src="./assets/terraza1.webp" class="w-full h-full object-cover" alt="Proyecto 3">
-                    </div>
-                    <!-- Imagen 4 -->
-                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
-                        <img src="./assets/terraza2.webp" class="w-full h-full object-cover" alt="Proyecto 4">
-                    </div>
-                    <!-- Imagen 5 -->
-                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
-                        <img src="./assets/terraza2.webp" class="w-full h-full object-cover" alt="Proyecto 4">
-                    </div>
-                    <!-- Imagen 6 -->
-                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
-                        <img src="./assets/terraza2.webp" class="w-full h-full object-cover" alt="Proyecto 4">
-                    </div>
-                    <!-- Imagen 7 -->
-                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
-                        <img src="./assets/terraza2.webp" class="w-full h-full object-cover" alt="Proyecto 4">
-                    </div>
-                    <!-- Imagen 8 -->
-                    <div class="carousel-item min-w-full relative aspect-video md:aspect-21/9">
-                        <img src="./assets/terraza2.webp" class="w-full h-full object-cover" alt="Proyecto 4">
-                    </div>
+
+                    <button onclick="moveMainCarousel(-1)"
+                        class="absolute left-4 top-1/2 -translate-y-1/2 z-40 bg-white/90 hover:bg-primary-lime text-navy-dark w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <span class="material-symbols-outlined !text-3xl">chevron_left</span>
+                    </button>
+
+                    <button onclick="moveMainCarousel(1)"
+                        class="absolute right-4 top-1/2 -translate-y-1/2 z-40 bg-white/90 hover:bg-primary-lime text-navy-dark w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                        <span class="material-symbols-outlined !text-3xl">chevron_right</span>
+                    </button>
+
+                    <div id="dots-container" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-40"></div>
                 </div>
-
-                <!-- Controles -->
-                <button onclick="moveMainCarousel(-1)"
-                    class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-primary-lime text-navy-dark w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span class="material-symbols-outlined text-2xl!">chevron_left</span>
-                </button>
-                <button onclick="moveMainCarousel(1)"
-                    class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-primary-lime text-navy-dark w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <span class="material-symbols-outlined text-2xl!">chevron_right</span>
-                </button>
-
-                <!-- Contenedor de Indicadores (Ahora se llena por JS) -->
-                <div id="dots-container" class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2"></div>
             </div>
         </div>
         <div class="mt-32 rounded-[3rem] bg-navy-dark text-white p-8 py-16 md:p-24 relative overflow-hidden shadow-2xl">
@@ -594,10 +625,10 @@
                 <h4 class="text-sm font-black uppercase text-primary  tracking-widest">
                     Ubicación
                 </h4>
-                <div class="rounded-lg overflow-hidden h-32 w-full bg-slate-200">
-                    <div class="w-full h-full bg-cover bg-center"
-                        style="background-image: url('/assets/location.png');"></div>
-                </div>
+                <iframe class="w-full h-full grayscale-0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3087.869054071502!2d-73.1286088!3d7.1177893999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f3e7a71fd3b%3A0xf60da60d733285aa!2sCAPITEL%20SOLUCIONES%20SAS%20%7C%20Empresa%20de%20construcci%C3%B3n%2C%20mantenimiento%20locativo%20y%20obras%20civiles!5e1!3m2!1ses-419!2sco!4v1774972311107!5m2!1ses-419!2sco"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" absolute inset-0 w-full h-full></iframe>
                 <p class="text-sm text-slate-500">
                     Cl 35 #12-52 Ofic. 312 BGA, Centro, Bucaramanga, Santander
                 </p>
